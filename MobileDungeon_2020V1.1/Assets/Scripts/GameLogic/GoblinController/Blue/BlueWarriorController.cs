@@ -14,6 +14,8 @@ public class BlueWarriorController : GoblinMovementManager
         bluewarrior = new BlueWarrior(this.gameObject);
         nav = this.gameObject.GetComponent<NavMeshAgent>();
         anim = this.gameObject.GetComponent<Animator>();
+        this.gameObject.GetComponent<GoblinHealthManager>().SetHealth(bluewarrior.GetHealth());
+        this.gameObject.GetComponent<GoblinHealthManager>().SetDefense(bluewarrior.GetDefense());
     }
     void FixedUpdate()
     {

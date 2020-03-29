@@ -14,6 +14,8 @@ public class BlueWitchdoctorController : GoblinMovementManager
         bluewitchdoctor = new BlueWitchdoctor(this.gameObject);
         nav = this.gameObject.GetComponent<NavMeshAgent>();
         anim = this.gameObject.GetComponent<Animator>();
+        this.gameObject.GetComponent<GoblinHealthManager>().SetHealth(bluewitchdoctor.GetHealth());
+        this.gameObject.GetComponent<GoblinHealthManager>().SetDefense(bluewitchdoctor.GetDefense());
     }
     void FixedUpdate()
     {

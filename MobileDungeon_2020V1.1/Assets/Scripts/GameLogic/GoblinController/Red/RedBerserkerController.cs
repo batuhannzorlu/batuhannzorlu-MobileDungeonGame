@@ -15,8 +15,8 @@ public class RedBerserkerController : GoblinMovementManager
         redberserker = new RedBerserker(this.gameObject);
         nav = this.gameObject.GetComponent<NavMeshAgent>();
         anim = this.gameObject.GetComponent<Animator>();
-
-        // redwitchdoctor.GetVisionDistance();
+        this.gameObject.GetComponent<GoblinHealthManager>().SetHealth(redberserker.GetHealth());
+        this.gameObject.GetComponent<GoblinHealthManager>().SetDefense(redberserker.GetDefense());
     }
     void FixedUpdate()
     {

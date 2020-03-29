@@ -14,8 +14,8 @@ public class RedWarriorController : GoblinMovementManager
         redwarrior = new RedWarrior(this.gameObject);
         nav = this.gameObject.GetComponent<NavMeshAgent>();
         anim = this.gameObject.GetComponent<Animator>();
-
-        // redwitchdoctor.GetVisionDistance();
+        this.gameObject.GetComponent<GoblinHealthManager>().SetHealth(redwarrior.GetHealth());
+        this.gameObject.GetComponent<GoblinHealthManager>().SetDefense(redwarrior.GetDefense());
     }
     void FixedUpdate()
     {

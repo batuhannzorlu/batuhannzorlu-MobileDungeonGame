@@ -74,7 +74,13 @@ MonoBehaviour:
   - {fileID: 8410346448007572831, guid: fd9de68e5fde0804ba757cee3ddabdef, type: 3}
   - {fileID: 6546416954248153643, guid: 9ca23e802e95c8643af0b34c04efe0eb, type: 3}
   - {fileID: 6118840244299279154, guid: b02b4225725ab6d4596a3033a2464d82, type: 3}
-  GreenGoblinBerserkerPrefab: []
+  GreenGoblinBerserkerPrefab:
+  - {fileID: 1346833631844724381, guid: 23c31f2ad83b70544a8d59705a4fccbf, type: 3}
+  - {fileID: 722034901864540965, guid: 30541e5727f9ca34cb4b54c7c7a32d85, type: 3}
+  - {fileID: 4048661053275041261, guid: 81e8e85ac50f5ec4982ad4ed354068f2, type: 3}
+  - {fileID: 8289257506014579614, guid: 8059a604625625d4d852d6ddb3c7fb29, type: 3}
+  - {fileID: 5317324130949179568, guid: e30934704fb85454b9a19fc3c0897df4, type: 3}
+  - {fileID: 6819044607847633997, guid: 28d82189bde43044abf18f5a84c1864d, type: 3}
   RedGoblinWarriorPrefab:
   - {fileID: 1913660780381491794, guid: 570b0f38fd8892b4296b34bed3bbdbcb, type: 3}
   - {fileID: 4037523369214109154, guid: 81bf8452d84e0224d8ab903efb6053db, type: 3}
@@ -89,7 +95,13 @@ MonoBehaviour:
   - {fileID: 8825853619690901586, guid: 4a26e90dbd944d54584f741486aa6e5e, type: 3}
   - {fileID: 3108473294048035179, guid: 5b58b6d430b612a488e271827ce5b1f6, type: 3}
   - {fileID: 4689633606166188437, guid: 168773b966e4c1249bc0d083041169d0, type: 3}
-  GreenGoblinWarriorPrefab: []
+  GreenGoblinWarriorPrefab:
+  - {fileID: 7358100781576794925, guid: a82494092869eb64496fd21eb6a33948, type: 3}
+  - {fileID: 5148980640755026331, guid: f0996fa3e1e79f44cb1d7a708747c4d3, type: 3}
+  - {fileID: 8886107208950096659, guid: 656b35dddc264e249854bd074e764dbb, type: 3}
+  - {fileID: 7508208812777614753, guid: 10a5eaa22ae042647899acd94dd7c617, type: 3}
+  - {fileID: 3672258436923828666, guid: 90dd6f0389127344db6908dd2bbd517c, type: 3}
+  - {fileID: 8896935015774905432, guid: f42578623e42b1442baa2e666d18a9e4, type: 3}
   RedGoblinWitchdoctorPrefab:
   - {fileID: 608779007405961929, guid: 03f924fb8cef4134c8640034b3955764, type: 3}
   - {fileID: 1512996438233929026, guid: 189cbe491ac64ca48b137c078da0549a, type: 3}
@@ -104,7 +116,13 @@ MonoBehaviour:
   - {fileID: 7084060538735437456, guid: 6f7b5dbd457cffa46908e524ec996e08, type: 3}
   - {fileID: 4087444891684938857, guid: b97fb197efd239b4ab4ae8f8717c8029, type: 3}
   - {fileID: 7717872353153623579, guid: ff1c8eab18eec114baa9c1d77ab5c10e, type: 3}
-  GreenGoblinWitchdoctorPrefab: []
+  GreenGoblinWitchdoctorPrefab:
+  - {fileID: 3227390989592905608, guid: 3990f1561f48ba741b2ebedde59a0b41, type: 3}
+  - {fileID: 3179229326336113463, guid: bfa15cce6eebe1f46827777efc0302e8, type: 3}
+  - {fileID: 6314104914017788581, guid: 23fa7e364a1736d4aa985c39e27132a1, type: 3}
+  - {fileID: 1635201763947178929, guid: bee1f4d94b82f524f8777a944c369306, type: 3}
+  - {fileID: 1578698902014242283, guid: c00a0a57f9e640b418eff015f8f11ceb, type: 3}
+  - {fileID: 3203321276662717546, guid: 4f67091b71e93434cbeb9fa077652e7b, type: 3}
   PowerUpSpawnLocations:
   - {fileID: 4602228811231725957, guid: 05bd5d9ab20cfb34d94a0092d18ef9b8, type: 3}
   - {fileID: 6247263971071985252, guid: a307f9e03b2f12847a4a01d61c3aff7c, type: 3}

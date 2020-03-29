@@ -14,6 +14,8 @@ public class GreenBerserkerController : GoblinMovementManager
         greenberserker = new GreenBerserker(this.gameObject);
         nav = this.gameObject.GetComponent<NavMeshAgent>();
         anim = this.gameObject.GetComponent<Animator>();
+        this.gameObject.GetComponent<GoblinHealthManager>().SetHealth(greenberserker.GetHealth());
+        this.gameObject.GetComponent<GoblinHealthManager>().SetDefense(greenberserker.GetDefense());
     }
     void FixedUpdate()
     {

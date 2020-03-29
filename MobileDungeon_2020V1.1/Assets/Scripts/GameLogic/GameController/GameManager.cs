@@ -57,6 +57,11 @@ public class GameManager : NetworkBehaviour
     private float BlueGoblinSpawntime = 5f;
     private float BlueGoblinspawntimeCurrent = 0;
 
+    private int GreenGoblinCurrent = 0;
+    private int GreenGoblinMax = 10;
+    private float GreenGoblinSpawntime = 5f;
+    private float GreenGoblinspawntimeCurrent = 0;
+
     public static GameManager singleton;
     public static List<GameObject> Players = null;
     public int ReferencePlayer = 0;
@@ -81,12 +86,14 @@ public class GameManager : NetworkBehaviour
         //{
         PowerUpSpawnManager();
         //RedGoblinSpawnManager();
-        BlueGoblinSpawnManager();
+        //BlueGoblinSpawnManager();
+        GreenGoblinSpawnManager();
 
         currentpowerupspawntime += Time.deltaTime;
-        currentgoblinspawntime += Time.deltaTime;
 
+        currentgoblinspawntime += Time.deltaTime;
         BlueGoblinspawntimeCurrent += Time.deltaTime;
+        GreenGoblinspawntimeCurrent += Time.deltaTime;
         //}
 
     }
@@ -204,14 +211,14 @@ public class GameManager : NetworkBehaviour
                 int randomNumber = Random.Range(0, GoblinSpawnLocations.Length - 1);
                 GameObject spawnlocation = GoblinSpawnLocations[randomNumber];
                 int randomGoblin = Random.Range(0, 6);
-                //TempGoblinRedBerserker = Instantiate(RedGoblinBerserkerPrefab[randomGoblin], GoblinSpawnLocations[randomNumber].transform.position, GoblinSpawnLocations[randomNumber].transform.rotation, null);
-                //TempGoblinRedBerserker.name = RedGoblinBerserkerPrefab[randomGoblin].name;
+                TempGoblinRedBerserker = Instantiate(RedGoblinBerserkerPrefab[randomGoblin], GoblinSpawnLocations[randomNumber].transform.position, GoblinSpawnLocations[randomNumber].transform.rotation, null);
+                TempGoblinRedBerserker.name = RedGoblinBerserkerPrefab[randomGoblin].name;
 
                 //TempGoblinRedWarrior = Instantiate(RedGoblinWarriorPrefab[randomGoblin], GoblinSpawnLocations[randomNumber].transform.position, GoblinSpawnLocations[randomNumber].transform.rotation, null);
                 //TempGoblinRedWarrior.name = RedGoblinWarriorPrefab[randomGoblin].name;
 
-                TempGoblinRedWitchdoctor = Instantiate(RedGoblinWitchdoctorPrefab[randomGoblin], GoblinSpawnLocations[randomNumber].transform.position, GoblinSpawnLocations[randomNumber].transform.rotation, null);
-                TempGoblinRedWitchdoctor.name = RedGoblinWitchdoctorPrefab[randomGoblin].name;
+                //TempGoblinRedWitchdoctor = Instantiate(RedGoblinWitchdoctorPrefab[randomGoblin], GoblinSpawnLocations[randomNumber].transform.position, GoblinSpawnLocations[randomNumber].transform.rotation, null);
+                //TempGoblinRedWitchdoctor.name = RedGoblinWitchdoctorPrefab[randomGoblin].name;
 
                 //RpcGoblinSpawnManager(randomGoblin, randomNumber);
                 IsGoblinSpawned = true;
@@ -244,30 +251,30 @@ public class GameManager : NetworkBehaviour
         }
     }
     //[Server]
-    //public void GreenGoblinSpawnManager()
-    //{
-    //    if (currentgoblinspawntime > goblinspawntime)
-    //    {
-    //        currentgoblinspawntime = 0;
-    //        if (CurrentGoblin <= MaxGoblin)
-    //        {
-    //            CurrentGoblin++;
-    //            int randomNumber = Random.Range(0, GoblinSpawnLocations.Length - 1);
-    //            GameObject spawnlocation = GoblinSpawnLocations[randomNumber];
-    //            int randomGoblin = Random.Range(0, 6);
-    //            TempGoblinRed = Instantiate(RedGoblinBerserkerPrefab[randomGoblin], GoblinSpawnLocations[randomNumber].transform.position, GoblinSpawnLocations[randomNumber].transform.rotation, null);
-    //            TempGoblinRed.name = RedGoblinBerserkerPrefab[randomGoblin].name;
+    public void GreenGoblinSpawnManager()
+    {
+        if (GreenGoblinspawntimeCurrent > GreenGoblinSpawntime)
+        {
+            GreenGoblinspawntimeCurrent = 0;
+            if (BlueGoblinCurrent <= GreenGoblinMax)
+            {
+                BlueGoblinCurrent++;
+                int randomNumber = Random.Range(0, GoblinSpawnLocations.Length - 1);
+                GameObject spawnlocation = GoblinSpawnLocations[randomNumber];
+                int randomGoblin = Random.Range(0, 6);
+                TempGoblinGreenBerserker = Instantiate(GreenGoblinBerserkerPrefab[randomGoblin], GoblinSpawnLocations[randomNumber].transform.position, GoblinSpawnLocations[randomNumber].transform.rotation, null);
+                TempGoblinGreenBerserker.name = GreenGoblinBerserkerPrefab[randomGoblin].name;
 
-    //            TempGoblinBlue = Instantiate(BlueGoblinBerserkerPrefab[randomGoblin], GoblinSpawnLocations[randomNumber].transform.position, GoblinSpawnLocations[randomNumber].transform.rotation, null);
-    //            TempGoblinBlue.name = BlueGoblinBerserkerPrefab[randomGoblin].name;
+                //TempGoblinGreenWarrior = Instantiate(GreenGoblinWarriorPrefab[randomGoblin], GoblinSpawnLocations[randomNumber].transform.position, GoblinSpawnLocations[randomNumber].transform.rotation, null);
+                //TempGoblinGreenWarrior.name = GreenGoblinWarriorPrefab[randomGoblin].name;
 
-    //            TempGoblinGreen = Instantiate(GreenGoblinBerserkerPrefab[randomGoblin], GoblinSpawnLocations[randomNumber].transform.position, GoblinSpawnLocations[randomNumber].transform.rotation, null);
-    //            TempGoblinGreen.name = GreenGoblinBerserkerPrefab[randomGoblin].name;
-    //            //RpcGoblinSpawnManager(randomGoblin, randomNumber);
-    //            IsGoblinSpawned = true;
-    //        }
-    //    }
-    //}
+                //TempGoblinGreenWitchdoctor = Instantiate(GreenGoblinWitchdoctorPrefab[randomGoblin], GoblinSpawnLocations[randomNumber].transform.position, GoblinSpawnLocations[randomNumber].transform.rotation, null);
+                //TempGoblinGreenWitchdoctor.name = GreenGoblinWitchdoctorPrefab[randomGoblin].name;
+                //RpcGoblinSpawnManager(randomGoblin, randomNumber);
+                IsGoblinSpawned = true;
+            }
+        }
+    }
 
 
 }

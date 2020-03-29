@@ -14,10 +14,12 @@ public class BlueBerserkerController : GoblinMovementManager
         blueberserker = new BlueBerserker(this.gameObject);
         nav = this.gameObject.GetComponent<NavMeshAgent>();
         anim = this.gameObject.GetComponent<Animator>();
+        this.gameObject.GetComponent<GoblinHealthManager>().SetHealth(blueberserker.GetHealth());
+        this.gameObject.GetComponent<GoblinHealthManager>().SetDefense(blueberserker.GetDefense());
     }
     void FixedUpdate()
     {
-        this.Attack(anim, blueberserker.GetAttackSpeed(), blueberserker.GetDamage(), blueberserker.GetCriticalDamage(), blueberserker.GetCriticalPercentage(),3);
+        this.Attack(anim, blueberserker.GetAttackSpeed(), blueberserker.GetDamage(), blueberserker.GetCriticalDamage(), blueberserker.GetCriticalPercentage(), 3);
         this.Chase(nav, anim, blueberserker.GetMoveSpeeed());
         this.HangAround(anim, 25);
     }
