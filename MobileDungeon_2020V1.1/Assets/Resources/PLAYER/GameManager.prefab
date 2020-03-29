@@ -1,0 +1,142 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2287317117514490573
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2287317117514490575}
+  - component: {fileID: 2287317117514490574}
+  - component: {fileID: 2287317117514490577}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2287317117514490575
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2287317117514490573}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 70.92035, y: 0, z: 99.353096}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2287317117514490574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2287317117514490573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2df8ce73697c7d7499aeb3af0d8cf6ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  PowerUpAttackPrefab: {fileID: 6422154749793659627, guid: d771a459735775344bd335bbf9ce8760,
+    type: 3}
+  PowerUpAttackEnhanchedPrefab: {fileID: 4429831763616497248, guid: 7ae67e6316cf14849983516100c23879,
+    type: 3}
+  PowerUpCrossPrefab: {fileID: 3649769164299492110, guid: 0cf5d8eeb92bfc94fa2057475a9cf444,
+    type: 3}
+  PowerUpCrossEnchanchedPrefab: {fileID: 6463293654522524394, guid: c72a35f77413fc147958600bf7f2c678,
+    type: 3}
+  PowerUpHPPrefab: {fileID: 2516700102150733633, guid: 5d15eecbdb642d541b4dbe6ca751309f,
+    type: 3}
+  PowerUpHPEnhancedPrefab: {fileID: 4416306056435046627, guid: 8165cca0e5165184dbf145d24941b87b,
+    type: 3}
+  PowerUpLuckCloverPrefab: {fileID: 2670416455274002648, guid: e1befb7a7e3c6744bbf3b82942b92740,
+    type: 3}
+  RedGoblinBerserkerPrefab:
+  - {fileID: 4703053781124703173, guid: 95f96c3103baaa04e892805d86eec141, type: 3}
+  - {fileID: 7561968304632487804, guid: fc6834444757b874e9ddaeafa2659ec0, type: 3}
+  - {fileID: 2541841230237942723, guid: 828e62b58b80701459c8bb8dac0232ec, type: 3}
+  - {fileID: 2303285705711970407, guid: 50499354c6d81d745a05eafa9d47bc6b, type: 3}
+  - {fileID: 9177697168892688839, guid: 0e4b2f17773380546b1858f6d35f8132, type: 3}
+  - {fileID: 2690273066265443079, guid: 8861158ad2d3cae4caa283f0b39e72fb, type: 3}
+  BlueGoblinBerserkerPrefab:
+  - {fileID: 431724611933503208, guid: 6cdca80eec2c6c4409a690a1c5100e75, type: 3}
+  - {fileID: 2817220943001933816, guid: bb6975036d41a114881c4d3f359f46e1, type: 3}
+  - {fileID: 5053647054907047849, guid: 308a0fd81c9d0314fa41995eeee01db2, type: 3}
+  - {fileID: 8410346448007572831, guid: fd9de68e5fde0804ba757cee3ddabdef, type: 3}
+  - {fileID: 6546416954248153643, guid: 9ca23e802e95c8643af0b34c04efe0eb, type: 3}
+  - {fileID: 6118840244299279154, guid: b02b4225725ab6d4596a3033a2464d82, type: 3}
+  GreenGoblinBerserkerPrefab: []
+  RedGoblinWarriorPrefab:
+  - {fileID: 1913660780381491794, guid: 570b0f38fd8892b4296b34bed3bbdbcb, type: 3}
+  - {fileID: 4037523369214109154, guid: 81bf8452d84e0224d8ab903efb6053db, type: 3}
+  - {fileID: 1306438928770239841, guid: 89e58099e67ebc9478608afe4dbada99, type: 3}
+  - {fileID: 4259551167922760312, guid: dab2e958a64a0fc448c6b2ddb8bc146c, type: 3}
+  - {fileID: 2779609777902174300, guid: 7571a0ac42684b648a196666e361355d, type: 3}
+  - {fileID: 1733010808979327245, guid: 4c096f6e7d5e67f4e9dc40fdcc4662d4, type: 3}
+  BlueGoblinWarriorrPrefab:
+  - {fileID: 2293487544970909859, guid: ab7261517b2281c48883f16fd365730b, type: 3}
+  - {fileID: 6187353691309915993, guid: 15a3cdfc3ef5167408fc96f1ee7056ca, type: 3}
+  - {fileID: 7277419844324546750, guid: 81c947cc3307f9140bb295fc4fa6c698, type: 3}
+  - {fileID: 8825853619690901586, guid: 4a26e90dbd944d54584f741486aa6e5e, type: 3}
+  - {fileID: 3108473294048035179, guid: 5b58b6d430b612a488e271827ce5b1f6, type: 3}
+  - {fileID: 4689633606166188437, guid: 168773b966e4c1249bc0d083041169d0, type: 3}
+  GreenGoblinWarriorPrefab: []
+  RedGoblinWitchdoctorPrefab:
+  - {fileID: 608779007405961929, guid: 03f924fb8cef4134c8640034b3955764, type: 3}
+  - {fileID: 1512996438233929026, guid: 189cbe491ac64ca48b137c078da0549a, type: 3}
+  - {fileID: 652951074843110708, guid: 1ad7591855b73a347b24b9e5ce3e3c96, type: 3}
+  - {fileID: 8477471049916063876, guid: b4810a1cc9a788a4e8c2840d12593dc2, type: 3}
+  - {fileID: 37858585743127131, guid: 765af6478abd4e44f96ae4e236bd61de, type: 3}
+  - {fileID: 4659547514730232769, guid: 676834725e5af8344946f549ffa0d9a9, type: 3}
+  BlueGoblinWitchdoctorPrefab:
+  - {fileID: 3341691053875929649, guid: 8f0eabc01e36d8d41b29ebf447c3e8f0, type: 3}
+  - {fileID: 6130539747915311719, guid: 23242fa03815a6249b9bb3be78117cbd, type: 3}
+  - {fileID: 1255389970548289660, guid: b0ef60358d629d44f835fea0d8fe2c59, type: 3}
+  - {fileID: 7084060538735437456, guid: 6f7b5dbd457cffa46908e524ec996e08, type: 3}
+  - {fileID: 4087444891684938857, guid: b97fb197efd239b4ab4ae8f8717c8029, type: 3}
+  - {fileID: 7717872353153623579, guid: ff1c8eab18eec114baa9c1d77ab5c10e, type: 3}
+  GreenGoblinWitchdoctorPrefab: []
+  PowerUpSpawnLocations:
+  - {fileID: 4602228811231725957, guid: 05bd5d9ab20cfb34d94a0092d18ef9b8, type: 3}
+  - {fileID: 6247263971071985252, guid: a307f9e03b2f12847a4a01d61c3aff7c, type: 3}
+  - {fileID: 6951902011682625729, guid: a5cdda4160bfeb744a25637b702c419d, type: 3}
+  - {fileID: 1097102792720100766, guid: 95ff5fc846b00aa47920e086a58f632f, type: 3}
+  - {fileID: 1600398262828553176, guid: 2e462d125a7d14e4dbc3d0086918f816, type: 3}
+  - {fileID: 380683083343218036, guid: 399a0f60f2ea34947af06b6a86cbe22d, type: 3}
+  - {fileID: 1676706319696769597, guid: 2e8474c3bf303664ca713311e51c7ea1, type: 3}
+  - {fileID: 6065061174668678452, guid: 3fd7aa584f2b2624f91068dbaa036137, type: 3}
+  GoblinSpawnLocations:
+  - {fileID: 2502381251895818993, guid: a13a91c799f5c104b9ff7dfbc6389d6b, type: 3}
+  - {fileID: 4183475881849445776, guid: dd022862269612c47bda5ee96eead37b, type: 3}
+  - {fileID: 7947404830327109398, guid: 2627ccbd6e838bf469c9ad7f7469daed, type: 3}
+  - {fileID: 4997255674272953431, guid: 73dee20abbfaa85428385ff4845b2b34, type: 3}
+  - {fileID: 35537907748418629, guid: ac3f80453a6e32a4f809de8e4a4f5e22, type: 3}
+  - {fileID: 7357397118819435652, guid: 8dc690f0024d930469cd8c0489d3a2f3, type: 3}
+  - {fileID: 7947404830327109398, guid: 2627ccbd6e838bf469c9ad7f7469daed, type: 3}
+  - {fileID: 1210316031236429177, guid: c0975671c3b3bb545a14d25e85eb941c, type: 3}
+  ReferencePlayer: 0
+  ClientCount: 0
+--- !u!114 &2287317117514490577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2287317117514490573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 0
+  serverOnly: 0
+  m_AssetId: 

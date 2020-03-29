@@ -1,0 +1,118 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!65 &426596390133193936
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6794315545420918906}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.58547246, z: 1.9831574}
+  m_Center: {x: 2.574838e-13, y: -0.031000882, z: 1.5285572}
+--- !u!114 &328962286100686576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6794315545420918906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d6ac96ba6b6ebe478719a27f51ca0e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &6794315545421002082
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 115992, guid: 33e827708b513894ab892b22e61b7d5b, type: 3}
+      propertyPath: m_Name
+      value: weapon_sword_gold_1 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 115992, guid: 33e827708b513894ab892b22e61b7d5b, type: 3}
+      propertyPath: m_TagString
+      value: WeaponSword
+      objectReference: {fileID: 0}
+    - target: {fileID: 440360, guid: 33e827708b513894ab892b22e61b7d5b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 15.079997
+      objectReference: {fileID: 0}
+    - target: {fileID: 440360, guid: 33e827708b513894ab892b22e61b7d5b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 440360, guid: 33e827708b513894ab892b22e61b7d5b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 21.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 440360, guid: 33e827708b513894ab892b22e61b7d5b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.27059764
+      objectReference: {fileID: 0}
+    - target: {fileID: 440360, guid: 33e827708b513894ab892b22e61b7d5b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.6532811
+      objectReference: {fileID: 0}
+    - target: {fileID: 440360, guid: 33e827708b513894ab892b22e61b7d5b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.27059707
+      objectReference: {fileID: 0}
+    - target: {fileID: 440360, guid: 33e827708b513894ab892b22e61b7d5b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.6532825
+      objectReference: {fileID: 0}
+    - target: {fileID: 440360, guid: 33e827708b513894ab892b22e61b7d5b, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 440360, guid: 33e827708b513894ab892b22e61b7d5b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 440360, guid: 33e827708b513894ab892b22e61b7d5b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 440360, guid: 33e827708b513894ab892b22e61b7d5b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 440360, guid: 33e827708b513894ab892b22e61b7d5b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 440360, guid: 33e827708b513894ab892b22e61b7d5b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 440360, guid: 33e827708b513894ab892b22e61b7d5b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9566396, guid: 33e827708b513894ab892b22e61b7d5b, type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: 9f5860989d7aca24cbda200a848a1ebf, type: 3}
+    - target: {fileID: 9566396, guid: 33e827708b513894ab892b22e61b7d5b, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b8db0fab95478d9429942db6e0de71a9, type: 2}
+    - target: {fileID: 9566396, guid: 33e827708b513894ab892b22e61b7d5b, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33e827708b513894ab892b22e61b7d5b, type: 3}
+--- !u!1 &6794315545420918906 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 115992, guid: 33e827708b513894ab892b22e61b7d5b,
+    type: 3}
+  m_PrefabInstance: {fileID: 6794315545421002082}
+  m_PrefabAsset: {fileID: 0}

@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!65 &7639394485281700332
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7328385666598825642}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1419091, y: 1, z: 1.165386}
+  m_Center: {x: -0.07095423, y: 0.0000001887225, z: 0.7389625}
+--- !u!114 &7639394485281700335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7328385666598825642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abc12a8a7d024634483e468e048d8ca2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &7328385666598651502
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 174276, guid: a61b09e765be4a34f8dfbd054c9f84ce, type: 3}
+      propertyPath: m_Name
+      value: weapon_crossbow_bronze_1 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 449482, guid: a61b09e765be4a34f8dfbd054c9f84ce, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 14.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 449482, guid: a61b09e765be4a34f8dfbd054c9f84ce, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 449482, guid: a61b09e765be4a34f8dfbd054c9f84ce, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 12.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 449482, guid: a61b09e765be4a34f8dfbd054c9f84ce, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.12607843
+      objectReference: {fileID: 0}
+    - target: {fileID: 449482, guid: a61b09e765be4a34f8dfbd054c9f84ce, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.25660446
+      objectReference: {fileID: 0}
+    - target: {fileID: 449482, guid: a61b09e765be4a34f8dfbd054c9f84ce, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.033782657
+      objectReference: {fileID: 0}
+    - target: {fileID: 449482, guid: a61b09e765be4a34f8dfbd054c9f84ce, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.95766234
+      objectReference: {fileID: 0}
+    - target: {fileID: 449482, guid: a61b09e765be4a34f8dfbd054c9f84ce, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 449482, guid: a61b09e765be4a34f8dfbd054c9f84ce, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 449482, guid: a61b09e765be4a34f8dfbd054c9f84ce, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 449482, guid: a61b09e765be4a34f8dfbd054c9f84ce, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 449482, guid: a61b09e765be4a34f8dfbd054c9f84ce, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 449482, guid: a61b09e765be4a34f8dfbd054c9f84ce, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 449482, guid: a61b09e765be4a34f8dfbd054c9f84ce, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9571140, guid: a61b09e765be4a34f8dfbd054c9f84ce, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9571140, guid: a61b09e765be4a34f8dfbd054c9f84ce, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 5ef3c6330e43aa845a0cbd973a8c56bf, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a61b09e765be4a34f8dfbd054c9f84ce, type: 3}
+--- !u!1 &7328385666598825642 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 174276, guid: a61b09e765be4a34f8dfbd054c9f84ce,
+    type: 3}
+  m_PrefabInstance: {fileID: 7328385666598651502}
+  m_PrefabAsset: {fileID: 0}

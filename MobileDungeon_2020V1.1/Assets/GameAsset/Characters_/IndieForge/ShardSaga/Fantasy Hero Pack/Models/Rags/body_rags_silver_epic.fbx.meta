@@ -1,0 +1,198 @@
+fileFormatVersion: 2
+guid: 79d7513072481424fb4822d21e400d1e
+labels:
+- Fantasy
+- Hero
+- Shard
+- Saga
+- Body
+- Armor
+timeCreated: 1470154827
+licenseType: Store
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: biped:Body_armor_rags_mergedFaceted2
+    100002: biped:mr:L_Arm_Clavicle_jnt
+    100004: biped:mr:L_Arm_Shoulder_jnt
+    100006: biped:mr:L_elbow_jnt
+    100008: biped:mr:L_Hands_Index_01_jnt
+    100010: biped:mr:L_Hands_Index_02_jnt
+    100012: biped:mr:L_Hands_Index_03_jnt
+    100014: biped:mr:L_Hands_Middle_01_jnt
+    100016: biped:mr:L_Hands_Middle_02_jnt
+    100018: biped:mr:L_Hands_Middle_03_jnt
+    100020: biped:mr:L_Hands_Pinky_01_jnt
+    100022: biped:mr:L_Hands_Pinky_02_jnt
+    100024: biped:mr:L_Hands_Pinky_03_jnt
+    100026: biped:mr:L_Hands_Ring_01_jnt
+    100028: biped:mr:L_Hands_Ring_02_jnt
+    100030: biped:mr:L_Hands_Ring_03_jnt
+    100032: biped:mr:L_Hands_Thumb_01_jnt
+    100034: biped:mr:L_Hands_Thumb_02_jnt
+    100036: biped:mr:L_Hands_Thumb_03_jnt
+    100038: biped:mr:L_Leg_Ankle_jnt
+    100040: biped:mr:L_Leg_Ball_jnt
+    100042: biped:mr:L_Leg_Hip
+    100044: biped:mr:L_Leg_Knee_jnt
+    100046: biped:mr:L_Leg_Toe
+    100048: biped:mr:L_Shield_AttachMent_jnt
+    100050: biped:mr:L_WeaponAttachMent_jnt
+    100052: biped:mr:L_wrist_jnt
+    100054: biped:mr:mesh
+    100056: biped:mr:NA_Head
+    100058: biped:mr:Neck_jnt
+    100060: biped:mr:R_Arm_Clavicle_jnt
+    100062: biped:mr:R_Arm_Shoulder_jnt
+    100064: biped:mr:R_elbow_jnt
+    100066: biped:mr:R_Hands_Index_01_jnt
+    100068: biped:mr:R_Hands_Index_02_jnt
+    100070: biped:mr:R_Hands_Index_03_jnt
+    100072: biped:mr:R_Hands_Middle_01_jnt
+    100074: biped:mr:R_Hands_Middle_02_jnt
+    100076: biped:mr:R_Hands_Middle_03_jnt
+    100078: biped:mr:R_Hands_Pinky_01_jnt
+    100080: biped:mr:R_Hands_Pinky_02_jnt
+    100082: biped:mr:R_Hands_Pinky_03_jnt
+    100084: biped:mr:R_Hands_Ring_01_jnt
+    100086: biped:mr:R_Hands_Ring_02_jnt
+    100088: biped:mr:R_Hands_Ring_03_jnt
+    100090: biped:mr:R_Hands_Thumb_01_jnt
+    100092: biped:mr:R_Hands_Thumb_02_jnt
+    100094: biped:mr:R_Hands_Thumb_03_jnt
+    100096: biped:mr:R_Leg_Ankle_jnt
+    100098: biped:mr:R_Leg_Ball_jnt
+    100100: biped:mr:R_Leg_Hip
+    100102: biped:mr:R_Leg_Knee_jnt
+    100104: biped:mr:R_Leg_Toe
+    100106: biped:mr:R_WeaponAttachMent_jnt
+    100108: biped:mr:R_wrist_jnt
+    100110: biped:mr:root_jnt
+    100112: biped:mr:skeleton
+    100114: biped:mr:spine_01_jnt
+    100116: biped:mr:spine_02_jnt
+    100118: //RootNode
+    400000: biped:Body_armor_rags_mergedFaceted2
+    400002: biped:mr:L_Arm_Clavicle_jnt
+    400004: biped:mr:L_Arm_Shoulder_jnt
+    400006: biped:mr:L_elbow_jnt
+    400008: biped:mr:L_Hands_Index_01_jnt
+    400010: biped:mr:L_Hands_Index_02_jnt
+    400012: biped:mr:L_Hands_Index_03_jnt
+    400014: biped:mr:L_Hands_Middle_01_jnt
+    400016: biped:mr:L_Hands_Middle_02_jnt
+    400018: biped:mr:L_Hands_Middle_03_jnt
+    400020: biped:mr:L_Hands_Pinky_01_jnt
+    400022: biped:mr:L_Hands_Pinky_02_jnt
+    400024: biped:mr:L_Hands_Pinky_03_jnt
+    400026: biped:mr:L_Hands_Ring_01_jnt
+    400028: biped:mr:L_Hands_Ring_02_jnt
+    400030: biped:mr:L_Hands_Ring_03_jnt
+    400032: biped:mr:L_Hands_Thumb_01_jnt
+    400034: biped:mr:L_Hands_Thumb_02_jnt
+    400036: biped:mr:L_Hands_Thumb_03_jnt
+    400038: biped:mr:L_Leg_Ankle_jnt
+    400040: biped:mr:L_Leg_Ball_jnt
+    400042: biped:mr:L_Leg_Hip
+    400044: biped:mr:L_Leg_Knee_jnt
+    400046: biped:mr:L_Leg_Toe
+    400048: biped:mr:L_Shield_AttachMent_jnt
+    400050: biped:mr:L_WeaponAttachMent_jnt
+    400052: biped:mr:L_wrist_jnt
+    400054: biped:mr:mesh
+    400056: biped:mr:NA_Head
+    400058: biped:mr:Neck_jnt
+    400060: biped:mr:R_Arm_Clavicle_jnt
+    400062: biped:mr:R_Arm_Shoulder_jnt
+    400064: biped:mr:R_elbow_jnt
+    400066: biped:mr:R_Hands_Index_01_jnt
+    400068: biped:mr:R_Hands_Index_02_jnt
+    400070: biped:mr:R_Hands_Index_03_jnt
+    400072: biped:mr:R_Hands_Middle_01_jnt
+    400074: biped:mr:R_Hands_Middle_02_jnt
+    400076: biped:mr:R_Hands_Middle_03_jnt
+    400078: biped:mr:R_Hands_Pinky_01_jnt
+    400080: biped:mr:R_Hands_Pinky_02_jnt
+    400082: biped:mr:R_Hands_Pinky_03_jnt
+    400084: biped:mr:R_Hands_Ring_01_jnt
+    400086: biped:mr:R_Hands_Ring_02_jnt
+    400088: biped:mr:R_Hands_Ring_03_jnt
+    400090: biped:mr:R_Hands_Thumb_01_jnt
+    400092: biped:mr:R_Hands_Thumb_02_jnt
+    400094: biped:mr:R_Hands_Thumb_03_jnt
+    400096: biped:mr:R_Leg_Ankle_jnt
+    400098: biped:mr:R_Leg_Ball_jnt
+    400100: biped:mr:R_Leg_Hip
+    400102: biped:mr:R_Leg_Knee_jnt
+    400104: biped:mr:R_Leg_Toe
+    400106: biped:mr:R_WeaponAttachMent_jnt
+    400108: biped:mr:R_wrist_jnt
+    400110: biped:mr:root_jnt
+    400112: biped:mr:skeleton
+    400114: biped:mr:spine_01_jnt
+    400116: biped:mr:spine_02_jnt
+    400118: //RootNode
+    4300000: biped:Body_armor_rags_mergedFaceted2
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: biped:Body_armor_rags_mergedFaceted2
+    13700002: biped:mr:root_jnt
+  materials:
+    importMaterials: 1
+    materialName: 1
+    materialSearch: 2
+  animations:
+    legacyGenerateAnimations: 3
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 3
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 100
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 1
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 803a9d702988c6e48a97a7f4f032ddbc,
+    type: 3}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
