@@ -163,12 +163,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  Attack_1Prefab: {fileID: 8858401763196696769, guid: f0d192ec075bcab438d8b339b11633a9,
+    type: 3}
+  Attack_2Prefab: {fileID: 8858401763196696769, guid: bf384726645f756418c6008b23565934,
+    type: 3}
   TextPrefab: {fileID: 4277393641914727723, guid: d887a57419feee147b151fa525524b3e,
     type: 3}
   text: {fileID: 0}
   textPos: {fileID: 772274641}
   Nick: Batuhan
   ChoosenClass: 
+  PlayerAnimator: {fileID: 0}
 --- !u!114 &-1117091976024031992
 MonoBehaviour:
   m_ObjectHideFlags: 0

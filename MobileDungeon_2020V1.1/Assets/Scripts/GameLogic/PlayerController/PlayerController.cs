@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using Mirror;
+using UnityEngine.EventSystems;
 
 public class PlayerController : NetworkBehaviour
 {
@@ -48,7 +49,26 @@ public class PlayerController : NetworkBehaviour
             transform.position += Vector3.back * speed * Time.deltaTime;
         }
     }
-    
+
+    public void OnSwordHammerAttack_1BtnDown()
+    {
+        this.GetComponent<SetupLocalPlayer>().PlayerAnimator.SetTrigger("Attack_1");
+        SetupLocalPlayer.player.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
+    }
+    public void OnSwordHammerAttack_2BtnDown()
+    {
+        this.GetComponent<SetupLocalPlayer>().PlayerAnimator.SetTrigger("Attack_2");
+        SetupLocalPlayer.player.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
+    }
+    public void OnSwordHammerAttackBtnUp()
+    {
+        //StartCoroutine(delay());
+        SetupLocalPlayer.player.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+        SetupLocalPlayer.player.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
+        //isBlockingOrAttacking = false;
+
+    }
+
     private void OnTriggerEnter(Collider collider)
     {
         GameObject CloneObject;

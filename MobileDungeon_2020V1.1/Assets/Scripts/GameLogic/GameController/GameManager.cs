@@ -85,9 +85,9 @@ public class GameManager : NetworkBehaviour
         //if (isServer)
         //{
         PowerUpSpawnManager();
- /*       RedGoblinSpawnManager()*/;
+        RedGoblinSpawnManager();
         BlueGoblinSpawnManager();
-        GreenGoblinSpawnManager();
+        //GreenGoblinSpawnManager();
 
         currentpowerupspawntime += Time.deltaTime;
 
@@ -211,14 +211,14 @@ public class GameManager : NetworkBehaviour
                 int randomNumber = Random.Range(0, GoblinSpawnLocations.Length - 1);
                 GameObject spawnlocation = GoblinSpawnLocations[randomNumber];
                 int randomGoblin = Random.Range(0, 6);
-                //TempGoblinRedBerserker = Instantiate(RedGoblinBerserkerPrefab[randomGoblin], GoblinSpawnLocations[randomNumber].transform.position, GoblinSpawnLocations[randomNumber].transform.rotation, null);
-                //TempGoblinRedBerserker.name = RedGoblinBerserkerPrefab[randomGoblin].name;
+                TempGoblinRedBerserker = Instantiate(RedGoblinBerserkerPrefab[randomGoblin], GoblinSpawnLocations[randomNumber].transform.position, GoblinSpawnLocations[randomNumber].transform.rotation, null);
+                TempGoblinRedBerserker.name = RedGoblinBerserkerPrefab[randomGoblin].name;
 
-                //TempGoblinRedWarrior = Instantiate(RedGoblinWarriorPrefab[randomGoblin], GoblinSpawnLocations[randomNumber].transform.position, GoblinSpawnLocations[randomNumber].transform.rotation, null);
-                //TempGoblinRedWarrior.name = RedGoblinWarriorPrefab[randomGoblin].name;
+                TempGoblinRedWarrior = Instantiate(RedGoblinWarriorPrefab[randomGoblin], GoblinSpawnLocations[randomNumber].transform.position, GoblinSpawnLocations[randomNumber].transform.rotation, null);
+                TempGoblinRedWarrior.name = RedGoblinWarriorPrefab[randomGoblin].name;
 
-                TempGoblinRedWitchdoctor = Instantiate(RedGoblinWitchdoctorPrefab[randomGoblin], GoblinSpawnLocations[randomNumber].transform.position, GoblinSpawnLocations[randomNumber].transform.rotation, null);
-                TempGoblinRedWitchdoctor.name = RedGoblinWitchdoctorPrefab[randomGoblin].name;
+                //TempGoblinRedWitchdoctor = Instantiate(RedGoblinWitchdoctorPrefab[randomGoblin], GoblinSpawnLocations[randomNumber].transform.position, GoblinSpawnLocations[randomNumber].transform.rotation, null);
+                //TempGoblinRedWitchdoctor.name = RedGoblinWitchdoctorPrefab[randomGoblin].name;
 
                 //RpcGoblinSpawnManager(randomGoblin, randomNumber);
                 IsGoblinSpawned = true;
@@ -237,14 +237,14 @@ public class GameManager : NetworkBehaviour
                 int randomNumber = Random.Range(0, GoblinSpawnLocations.Length - 1);
                 GameObject spawnlocation = GoblinSpawnLocations[randomNumber];
                 int randomGoblin = Random.Range(0, 6);
-                //TempGoblinBlueBerserker = Instantiate(BlueGoblinBerserkerPrefab[randomGoblin], GoblinSpawnLocations[randomNumber].transform.position, GoblinSpawnLocations[randomNumber].transform.rotation, null);
-                //TempGoblinBlueBerserker.name = BlueGoblinBerserkerPrefab[randomGoblin].name;
+                TempGoblinBlueBerserker = Instantiate(BlueGoblinBerserkerPrefab[randomGoblin], GoblinSpawnLocations[randomNumber].transform.position, GoblinSpawnLocations[randomNumber].transform.rotation, null);
+                TempGoblinBlueBerserker.name = BlueGoblinBerserkerPrefab[randomGoblin].name;
 
-                //TempGoblinBlueWarrior = Instantiate(BlueGoblinWarriorrPrefab[randomGoblin], GoblinSpawnLocations[randomNumber].transform.position, GoblinSpawnLocations[randomNumber].transform.rotation, null);
-                //TempGoblinBlueWarrior.name = BlueGoblinWarriorrPrefab[randomGoblin].name;
+                TempGoblinBlueWarrior = Instantiate(BlueGoblinWarriorrPrefab[randomGoblin], GoblinSpawnLocations[randomNumber].transform.position, GoblinSpawnLocations[randomNumber].transform.rotation, null);
+                TempGoblinBlueWarrior.name = BlueGoblinWarriorrPrefab[randomGoblin].name;
 
-                TempGoblinBlueWitchdoctor = Instantiate(BlueGoblinWitchdoctorPrefab[randomGoblin], GoblinSpawnLocations[randomNumber].transform.position, GoblinSpawnLocations[randomNumber].transform.rotation, null);
-                TempGoblinBlueWitchdoctor.name = BlueGoblinWitchdoctorPrefab[randomGoblin].name;
+                //TempGoblinBlueWitchdoctor = Instantiate(BlueGoblinWitchdoctorPrefab[randomGoblin], GoblinSpawnLocations[randomNumber].transform.position, GoblinSpawnLocations[randomNumber].transform.rotation, null);
+                //TempGoblinBlueWitchdoctor.name = BlueGoblinWitchdoctorPrefab[randomGoblin].name;
                 //RpcGoblinSpawnManager(randomGoblin, randomNumber);
                 IsGoblinSpawned = true;
             }

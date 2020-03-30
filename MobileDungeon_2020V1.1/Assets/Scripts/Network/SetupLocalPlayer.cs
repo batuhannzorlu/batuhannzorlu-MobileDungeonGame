@@ -3,9 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
+using UnityEngine.Events;
 
 public class SetupLocalPlayer : NetworkBehaviour
 {
+    Button Attack_1;
+    Button Attack_2;
+    public Button Attack_1Prefab;
+    public Button Attack_2Prefab;
 
     public Text TextPrefab;
     public Text text;
@@ -32,7 +38,7 @@ public class SetupLocalPlayer : NetworkBehaviour
     GameObject CloneWeapon;
     GameObject CloneShield;
 
-    Animator PlayerAnimator;
+    public Animator PlayerAnimator;
     NetworkAnimator PlayerNAnim;
 
     public override void OnStartClient()
@@ -50,19 +56,26 @@ public class SetupLocalPlayer : NetworkBehaviour
         switch (ChoosenClass)
         {
             case "HammerBerserker":
-                SetupHammerBerserker();
+                SetupDefaultHammerBerserker();
+                PlayerAnimator = transform.GetChild(1).gameObject.GetComponent<Animator>();
+                SetupHammerBerserkerUI();
                 break;
             case "SwordBerserker":
-                SetupSwordBerserker();
+                SetupDefaultSwordBerserker();
+                PlayerAnimator = transform.GetChild(1).gameObject.GetComponent<Animator>();
+                SetupSwordBerserkerUI();
                 break;
             case "CrossBow":
-                SetupCrossBow();
+                SetupDefaultCrossBow();
+                PlayerAnimator = transform.GetChild(1).gameObject.GetComponent<Animator>();
+                SetupCrossBowUI();
                 break;
             case "Rogue":
-                SetupRogue();
+                SetupDefaultRogue();
                 break;
         }
         //PlayerAnimator = transform.GetChild(1).gameObject.GetComponent<Animator>();
+
         //PlayerNAnim = transform.gameObject.GetComponent<NetworkAnimator>();
         //PlayerNAnim.animator = transform.GetChild(1).gameObject.GetComponent<Animator>();
         base.OnStartClient();
@@ -93,7 +106,7 @@ public class SetupLocalPlayer : NetworkBehaviour
         text.transform.position = _TextPos;
     }
 
-    void SetupHammerBerserker()
+    void SetupDefaultHammerBerserker()
     {
         Berserker berserker;
         string Key = "Hammer";
@@ -138,7 +151,7 @@ public class SetupLocalPlayer : NetworkBehaviour
         Debug.Log(Nick + " MovementSpeed: " + z);
         Debug.Log(Nick + " AttackSpeed: " + t);
     }
-    void SetupSwordBerserker()
+    void SetupDefaultSwordBerserker()
     {
         Berserker berserker;
         string Key = "Sword";
@@ -158,7 +171,6 @@ public class SetupLocalPlayer : NetworkBehaviour
                 Find("biped:mr:R_wrist_jnt").Find("biped:mr:R_WeaponAttachMent_jnt").gameObject;
         CloneWeapon = Instantiate(PlayerWeapon, new Vector3(WeaponHand.transform.position.x, WeaponHand.transform.position.y, WeaponHand.transform.position.z), WeaponHand.transform.rotation, WeaponHand.transform);
         CloneWeapon.name = PlayerWeapon.name;
-
 
         PlayerShield = berserker.GetShield();
         PlayerShield.transform.localScale = new Vector3(2, 2, 2);
@@ -183,13 +195,67 @@ public class SetupLocalPlayer : NetworkBehaviour
         Debug.Log(Nick + " MovementSpeed: " + z);
         Debug.Log(Nick + " AttackSpeed: " + t);
     }
-    void SetupCrossBow()
+
+   
+    void SetupDefaultCrossBow()
     {
 
     }
-    void SetupRogue()
+    void SetupDefaultRogue()
     {
 
+    }
+
+    void SetupHammerBerserkerUI()
+    {
+        GameObject canvas = GameObject.FindWithTag("MainCanvas");
+        Attack_1 = Instantiate(Attack_1Prefab, Vector3.zero, Quaternion.identity) as Button;
+        Attack_1.transform.SetParent(canvas.transform);
+        Attack_1.transform.localScale = new Vector3(1, 1, 1);
+        Attack_1.onClick.RemoveAllListeners();
+        Attack_1.onClick.AddListener(delegate { this.gameObject.GetComponent<PlayerController>().OnSwordHammerAttack_1BtnDown(); });
+        Attack_1.GetComponent<RectTransform>().anchoredPosition = new Vector2(600, 0);
+        //Attack_1.image = (Image)(Resources.Load("GameAssetInScene/UI/UIAttackSprites/IIMW 7"));
+
+        Attack_2 = Instantiate(Attack_2Prefab, Vector3.zero, Quaternion.identity) as Button;
+        Attack_2.transform.SetParent(canvas.transform);
+        Attack_2.transform.localScale = new Vector3(1, 1, 1);
+        Attack_2.onClick.RemoveAllListeners();
+        Attack_2.onClick.AddListener(delegate { this.gameObject.GetComponent<PlayerController>().OnSwordHammerAttack_2BtnDown(); });
+        Attack_2.GetComponent<RectTransform>().anchoredPosition = new Vector2(200, 0);
+        //Attack_2.GetComponent<Image>().sprite = (Sprite)(Resources.Load("GameAssetInScene/UI/UIAttackSprites/IIMW 12.png"));
+    }
+    void SetupSwordBerserkerUI()
+    {
+        GameObject canvas = GameObject.FindWithTag("MainCanvas");
+        Attack_2 = Instantiate(Attack_2Prefab, Vector3.zero, Quaternion.identity) as Button;
+        Attack_2.transform.SetParent(canvas.transform);
+        Attack_2.transform.localScale = new Vector3(1, 1, 1);
+        Attack_2.onClick.RemoveAllListeners();
+        Attack_2.onClick.AddListener(delegate { this.gameObject.GetComponent<PlayerController>().OnSwordHammerAttack_2BtnDown(); });
+        Attack_2.GetComponent<RectTransform>().anchoredPosition = new Vector2(800, -300);
+        //Attack_2.GetComponent<Image>().sprite = (Sprite)(Resources.Load("GameAssetInScene/UI/UIAttackSprites/IIMW 12.png"));
+
+        Attack_1 = Instantiate(Attack_1Prefab, Vector3.zero, Quaternion.identity) as Button;
+        Attack_1.transform.SetParent(canvas.transform);
+        Attack_1.transform.localScale = new Vector3(1, 1, 1);
+        Attack_1.onClick.RemoveAllListeners();
+        Attack_1.onClick.AddListener(delegate { this.gameObject.GetComponent<PlayerController>().OnSwordHammerAttack_1BtnDown(); });
+        Attack_1.GetComponent<RectTransform>().anchoredPosition = new Vector2(600, -300);
+        //Attack_1.GetComponent<Image>().sprite = (Sprite)(Resources.Load("GameAssetInScene/UI/UIAttackSprites/IIMW 1.png"));
+
+
+    }
+    void SetupCrossBowUI()
+    {
+        GameObject canvas = GameObject.FindWithTag("MainCanvas");
+        Attack_1 = Instantiate(Attack_1Prefab, Vector3.zero, Quaternion.identity) as Button;
+        Attack_1.transform.SetParent(canvas.transform);
+        Attack_1.transform.localScale = new Vector3(1, 1, 1);
+        Attack_1.onClick.RemoveAllListeners();
+      //  Attack_1.onClick.AddListener(delegate { this.gameObject.GetComponent<PlayerController>().OnSwordHammerAttackBtnDown(); });
+        Attack_1.GetComponent<RectTransform>().anchoredPosition = new Vector2(600, 0);
+        //Attack_1.image = (Image)(Resources.Load("GameAssetInScene/UI/UIAttackSprites/IIMW 15"));
     }
 
 
