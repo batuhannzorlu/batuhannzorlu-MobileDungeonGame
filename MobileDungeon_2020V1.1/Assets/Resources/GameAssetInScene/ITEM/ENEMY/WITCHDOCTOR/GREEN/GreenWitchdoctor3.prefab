@@ -1491,6 +1491,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  FirePosition: {fileID: 1013604947728299145}
+  FirePrefab: {fileID: 6320558573210777513, guid: f5413d6994252f44aa84663dd5c72f16,
+    type: 3}
 --- !u!114 &33625510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1521,6 +1524,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  FirePosition: {fileID: 1013604947728299145}
+  FirePrefab: {fileID: 6320558573210777513, guid: f5413d6994252f44aa84663dd5c72f16,
+    type: 3}
 --- !u!1 &1635201763947180391
 GameObject:
   m_ObjectHideFlags: 0
@@ -2148,6 +2154,36 @@ Transform:
   m_Children:
   - {fileID: 1635201763947428407}
   m_Father: {fileID: 1635201763947416659}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5020223555565878220
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1013604947728299145}
+  m_Layer: 0
+  m_Name: FirePos (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1013604947728299145
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5020223555565878220}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 3.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1635201764012050516}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1635201763734122861

@@ -30,6 +30,45 @@ Transform:
   m_Father: {fileID: 6314104914017629001}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3910361283817818953
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6118470067845756433}
+  - component: {fileID: 556618976475626815}
+  m_Layer: 0
+  m_Name: FirePos (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6118470067845756433
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3910361283817818953}
+  m_LocalRotation: {x: 0.014081055, y: 0.0000021290032, z: -0.0003648698, w: -0.9999008}
+  m_LocalPosition: {x: 0, y: 3.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6314104914758530480}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &556618976475626815
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3910361283817818953}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &6314104914017780081
 GameObject:
   m_ObjectHideFlags: 0
@@ -314,6 +353,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  FirePosition: {fileID: 6118470067845756433}
+  FirePrefab: {fileID: 6320558573210777513, guid: f5413d6994252f44aa84663dd5c72f16,
+    type: 3}
 --- !u!114 &1436455375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -344,6 +386,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  FirePosition: {fileID: 6118470067845756433}
+  FirePrefab: {fileID: 6320558573210777513, guid: f5413d6994252f44aa84663dd5c72f16,
+    type: 3}
 --- !u!1 &6314104914017791673
 GameObject:
   m_ObjectHideFlags: 0

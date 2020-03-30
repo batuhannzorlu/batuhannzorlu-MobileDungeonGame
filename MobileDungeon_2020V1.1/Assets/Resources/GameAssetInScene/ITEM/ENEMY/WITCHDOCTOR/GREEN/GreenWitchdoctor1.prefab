@@ -30,6 +30,36 @@ Transform:
   m_Father: {fileID: 3179229326335857637}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1881786413129233245
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4952135151507883386}
+  m_Layer: 0
+  m_Name: FirePos (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4952135151507883386
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1881786413129233245}
+  m_LocalRotation: {x: 0.014081055, y: 0.0000021290032, z: -0.0003648698, w: -0.9999008}
+  m_LocalPosition: {x: 0, y: 3.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3179229326499849351}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3179229326336068227
 GameObject:
   m_ObjectHideFlags: 0
@@ -1026,6 +1056,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  FirePosition: {fileID: 4952135151507883386}
+  FirePrefab: {fileID: 6320558573210777513, guid: f5413d6994252f44aa84663dd5c72f16,
+    type: 3}
 --- !u!114 &1853927502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1056,6 +1089,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  FirePosition: {fileID: 4952135151507883386}
+  FirePrefab: {fileID: 6320558573210777513, guid: f5413d6994252f44aa84663dd5c72f16,
+    type: 3}
 --- !u!1 &3179229326336115279
 GameObject:
   m_ObjectHideFlags: 0

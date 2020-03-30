@@ -85,7 +85,7 @@ public class GameManager : NetworkBehaviour
         //if (isServer)
         //{
         PowerUpSpawnManager();
-        RedGoblinSpawnManager();
+ /*       RedGoblinSpawnManager()*/;
         BlueGoblinSpawnManager();
         GreenGoblinSpawnManager();
 

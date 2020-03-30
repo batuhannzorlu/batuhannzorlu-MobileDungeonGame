@@ -13,6 +13,11 @@ public class GoblinMovementManager : NetworkBehaviour
     protected bool IsPlayerInHangOutRange = false;
     protected float AttackRange = 3;
 
+
+    public Transform FirePosition;
+    public GameObject FirePrefab;
+    BoxCollider Weapon;
+
     public void Chase(NavMeshAgent nav, Animator anim,float _MoveSpeed)
     {
         FindReferencePlayer();
@@ -73,5 +78,24 @@ public class GoblinMovementManager : NetworkBehaviour
                 ReferencePlayer = i;
             }
         }
+    }
+
+    //BERSERKER-WARRIOR ATTACK
+    private void OnBeginAttack()
+    {
+        Weapon = this.GetComponentInChildren<BoxCollider>();
+        Weapon.enabled = true;
+    }
+    private void OnEndAttack()
+    {
+        Weapon = this.GetComponentInChildren<BoxCollider>();
+        Weapon.enabled = false;
+    }
+
+    //WITCHDOCTOR ATTACK
+    private void CreateFire()
+    {
+        GameObject _Fire = Instantiate(FirePrefab, FirePosition.transform.position, FirePosition.transform.rotation);
+        _Fire.gameObject.GetComponent<Rigidbody>().AddForce((this.transform.forward+new Vector3(0,0.1f,0))*500);
     }
 }
