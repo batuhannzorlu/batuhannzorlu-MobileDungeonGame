@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6579548935405063094
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6039842751032598768}
+  m_Layer: 0
+  m_Name: Sphere (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6039842751032598768
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6579548935405063094}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7717872353153175901}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7717872353153385437
 GameObject:
   m_ObjectHideFlags: 0
@@ -1215,6 +1245,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7717872353153218173}
+  - {fileID: 6039842751032598768}
   m_Father: {fileID: 7717872353153203659}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1510,6 +1541,7 @@ GameObject:
   - component: {fileID: 3928163619976360110}
   - component: {fileID: 4942495486205872186}
   - component: {fileID: -7475377626578017754}
+  - component: {fileID: 8767144635556211130}
   m_Layer: 0
   m_Name: BlueWitchdoctor5
   m_TagString: Untagged
@@ -1666,6 +1698,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+--- !u!114 &8767144635556211130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7717872353153623579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 827b5ba8db49d4e44b2a8f09fdc55e31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SliderPrefab: {fileID: 8461457668603043680, guid: b8bbd541baac22e44bc00b4e9d08f626,
+    type: 3}
+  slider: {fileID: 0}
+  SliderPos: {fileID: 6039842751032598768}
 --- !u!1 &7717872353153624755
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2866439096218866741
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3416982012089422165}
+  m_Layer: 0
+  m_Name: Sphere (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3416982012089422165
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2866439096218866741}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.88, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4689633606166001395}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4689633606166184243
 GameObject:
   m_ObjectHideFlags: 0
@@ -109,6 +139,7 @@ GameObject:
   - component: {fileID: -2831368152595642208}
   - component: {fileID: -3170222657590568664}
   - component: {fileID: 7734340436655258695}
+  - component: {fileID: 1623496586}
   m_Layer: 0
   m_Name: BlueWarrior5
   m_TagString: Untagged
@@ -265,6 +296,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+--- !u!114 &1623496586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4689633606166188437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 827b5ba8db49d4e44b2a8f09fdc55e31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SliderPrefab: {fileID: 8461457668603043680, guid: b8bbd541baac22e44bc00b4e9d08f626,
+    type: 3}
+  slider: {fileID: 0}
+  SliderPos: {fileID: 3416982012089422165}
 --- !u!1 &4689633606166189991
 GameObject:
   m_ObjectHideFlags: 0
@@ -1268,6 +1315,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4689633606414185408}
+  - {fileID: 3416982012089422165}
   m_Father: {fileID: 4689633606166028339}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

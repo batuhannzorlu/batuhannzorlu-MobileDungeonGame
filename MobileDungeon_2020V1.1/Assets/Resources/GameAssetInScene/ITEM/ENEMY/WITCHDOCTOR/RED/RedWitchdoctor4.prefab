@@ -804,6 +804,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 37858584330132943}
+  - {fileID: 481603617497903239}
   m_Father: {fileID: 37858585743211169}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1853,6 +1854,7 @@ GameObject:
   - component: {fileID: 8064722328286839989}
   - component: {fileID: -8899941430932192157}
   - component: {fileID: -4401726098264171848}
+  - component: {fileID: 5564778477734805819}
   m_Layer: 0
   m_Name: RedWitchdoctor4
   m_TagString: Untagged
@@ -2009,6 +2011,22 @@ CapsuleCollider:
   m_Height: 3.4971294
   m_Direction: 1
   m_Center: {x: 0.02184999, y: 1.4903836, z: -0.119654775}
+--- !u!114 &5564778477734805819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37858585743127131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 827b5ba8db49d4e44b2a8f09fdc55e31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SliderPrefab: {fileID: 8461457668603043680, guid: b8bbd541baac22e44bc00b4e9d08f626,
+    type: 3}
+  slider: {fileID: 0}
+  SliderPos: {fileID: 481603617497903239}
 --- !u!1 &37858585743127693
 GameObject:
   m_ObjectHideFlags: 0
@@ -2101,6 +2119,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 37858585743205719}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8728097849210634843
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 481603617497903239}
+  m_Layer: 0
+  m_Name: Sphere (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &481603617497903239
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8728097849210634843}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 37858585743218033}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &37858584330307019
 PrefabInstance:

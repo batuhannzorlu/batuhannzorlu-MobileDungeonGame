@@ -1632,6 +1632,7 @@ GameObject:
   - component: {fileID: -510830216414178413}
   - component: {fileID: 4515208428264589395}
   - component: {fileID: -4426738610847923999}
+  - component: {fileID: 2676404557865784721}
   m_Layer: 0
   m_Name: RedWitchdoctor2
   m_TagString: Untagged
@@ -1788,6 +1789,22 @@ CapsuleCollider:
   m_Height: 3.4971294
   m_Direction: 1
   m_Center: {x: 0.02184999, y: 1.4903836, z: -0.119654775}
+--- !u!114 &2676404557865784721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 652951074843110708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 827b5ba8db49d4e44b2a8f09fdc55e31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SliderPrefab: {fileID: 8461457668603043680, guid: b8bbd541baac22e44bc00b4e9d08f626,
+    type: 3}
+  slider: {fileID: 0}
+  SliderPos: {fileID: 7511921766994729607}
 --- !u!1 &652951074843112112
 GameObject:
   m_ObjectHideFlags: 0
@@ -2100,6 +2117,36 @@ Transform:
   m_LocalScale: {x: 0.9999999, y: 0.99999994, z: 1}
   m_Children: []
   m_Father: {fileID: 652951074843138722}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2333283003077428596
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7511921766994729607}
+  m_Layer: 0
+  m_Name: Sphere (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7511921766994729607
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2333283003077428596}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 652951075574801799}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &652951075422446840
