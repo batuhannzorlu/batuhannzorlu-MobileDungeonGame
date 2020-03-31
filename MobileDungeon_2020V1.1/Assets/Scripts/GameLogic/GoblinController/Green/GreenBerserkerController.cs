@@ -18,9 +18,16 @@ public class GreenBerserkerController : GoblinMovementManager
         this.gameObject.GetComponent<GoblinHealthManager>().SetDefense(greenberserker.GetDefense());
     }
     void FixedUpdate()
-    {
-        this.Attack(anim, greenberserker.GetAttackSpeed(), greenberserker.GetDamage(), greenberserker.GetCriticalDamage(), greenberserker.GetCriticalPercentage(),3);
-        this.Chase(nav, anim, greenberserker.GetMoveSpeeed());
-        this.HangAround(anim, 15);
+    {      
+        if (this.GetComponent<GoblinHealthManager>().GetHealth()>0)
+        {
+            this.Attack(anim, greenberserker.GetAttackSpeed(), greenberserker.GetDamage(), greenberserker.GetCriticalDamage(), greenberserker.GetCriticalPercentage(), 3);
+            this.Chase(nav, anim, greenberserker.GetMoveSpeeed());
+            this.HangAround(anim, 15);
+        }
+        else
+            this.StartCoroutine("Die");
+
+
     }
 }

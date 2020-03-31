@@ -67,7 +67,6 @@ public class Goblin
             || _type == "GreenWitchdoctor" || _type == "RedWarrior" || _type == "BlueBerserker" || _type == "BlueWitchdoctor" || _type == "BlueWarrior")
         {
             this.ItemObj = Resources.LoadAll<GameObject>(_FilePathObj);
-            Debug.Log("Loaded Successfully!");
         }
     }
     protected void UnLoadAssets() { Resources.UnloadUnusedAssets(); }

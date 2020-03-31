@@ -68,8 +68,6 @@ public class GameManager : NetworkBehaviour
     public int ClientCount = 0;
 
 
-    public static bool IsGoblinSpawned = false;
-
     private void Awake()
     {
         singleton = this;
@@ -86,7 +84,7 @@ public class GameManager : NetworkBehaviour
         //{
         PowerUpSpawnManager();
         RedGoblinSpawnManager();
-        BlueGoblinSpawnManager();
+        //BlueGoblinSpawnManager();
         //GreenGoblinSpawnManager();
 
         currentpowerupspawntime += Time.deltaTime;
@@ -217,11 +215,10 @@ public class GameManager : NetworkBehaviour
                 TempGoblinRedWarrior = Instantiate(RedGoblinWarriorPrefab[randomGoblin], GoblinSpawnLocations[randomNumber].transform.position, GoblinSpawnLocations[randomNumber].transform.rotation, null);
                 TempGoblinRedWarrior.name = RedGoblinWarriorPrefab[randomGoblin].name;
 
-                //TempGoblinRedWitchdoctor = Instantiate(RedGoblinWitchdoctorPrefab[randomGoblin], GoblinSpawnLocations[randomNumber].transform.position, GoblinSpawnLocations[randomNumber].transform.rotation, null);
-                //TempGoblinRedWitchdoctor.name = RedGoblinWitchdoctorPrefab[randomGoblin].name;
+                TempGoblinRedWitchdoctor = Instantiate(RedGoblinWitchdoctorPrefab[randomGoblin], GoblinSpawnLocations[randomNumber].transform.position, GoblinSpawnLocations[randomNumber].transform.rotation, null);
+                TempGoblinRedWitchdoctor.name = RedGoblinWitchdoctorPrefab[randomGoblin].name;
 
                 //RpcGoblinSpawnManager(randomGoblin, randomNumber);
-                IsGoblinSpawned = true;
             }
         }
     }
@@ -246,7 +243,6 @@ public class GameManager : NetworkBehaviour
                 //TempGoblinBlueWitchdoctor = Instantiate(BlueGoblinWitchdoctorPrefab[randomGoblin], GoblinSpawnLocations[randomNumber].transform.position, GoblinSpawnLocations[randomNumber].transform.rotation, null);
                 //TempGoblinBlueWitchdoctor.name = BlueGoblinWitchdoctorPrefab[randomGoblin].name;
                 //RpcGoblinSpawnManager(randomGoblin, randomNumber);
-                IsGoblinSpawned = true;
             }
         }
     }
@@ -271,7 +267,6 @@ public class GameManager : NetworkBehaviour
                 TempGoblinGreenWitchdoctor = Instantiate(GreenGoblinWitchdoctorPrefab[randomGoblin], GoblinSpawnLocations[randomNumber].transform.position, GoblinSpawnLocations[randomNumber].transform.rotation, null);
                 TempGoblinGreenWitchdoctor.name = GreenGoblinWitchdoctorPrefab[randomGoblin].name;
                 //RpcGoblinSpawnManager(randomGoblin, randomNumber);
-                IsGoblinSpawned = true;
             }
         }
     }

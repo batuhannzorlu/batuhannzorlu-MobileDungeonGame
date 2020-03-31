@@ -18,9 +18,14 @@ public class GreenWarriorController : GoblinMovementManager
         this.gameObject.GetComponent<GoblinHealthManager>().SetDefense(greenwarrior.GetDefense());
     }
     void FixedUpdate()
-    {
-        this.Attack(anim, greenwarrior.GetAttackSpeed(), greenwarrior.GetDamage(), greenwarrior.GetCriticalDamage(), greenwarrior.GetCriticalPercentage(), 3);
-        this.Chase(nav, anim, greenwarrior.GetMoveSpeeed());
-        this.HangAround(anim, 25);
+    {     
+        if (this.GetComponent<GoblinHealthManager>().GetHealth()>0)
+        {
+            this.Attack(anim, greenwarrior.GetAttackSpeed(), greenwarrior.GetDamage(), greenwarrior.GetCriticalDamage(), greenwarrior.GetCriticalPercentage(), 3);
+            this.Chase(nav, anim, greenwarrior.GetMoveSpeeed());
+            this.HangAround(anim, 25);
+        }
+        else
+            this.StartCoroutine("Die");
     }
 }

@@ -74,12 +74,7 @@ public class SetupLocalPlayer : NetworkBehaviour
                 SetupDefaultRogue();
                 break;
         }
-        //PlayerAnimator = transform.GetChild(1).gameObject.GetComponent<Animator>();
-
-        //PlayerNAnim = transform.gameObject.GetComponent<NetworkAnimator>();
-        //PlayerNAnim.animator = transform.GetChild(1).gameObject.GetComponent<Animator>();
         base.OnStartClient();
-
     }
     void Start()
     {
@@ -233,7 +228,7 @@ public class SetupLocalPlayer : NetworkBehaviour
         Attack_2.transform.localScale = new Vector3(1, 1, 1);
         Attack_2.onClick.RemoveAllListeners();
         Attack_2.onClick.AddListener(delegate { this.gameObject.GetComponent<PlayerController>().OnSwordHammerAttack_2BtnDown(); });
-        Attack_2.GetComponent<RectTransform>().anchoredPosition = new Vector2(800, -300);
+        Attack_2.GetComponent<RectTransform>().anchoredPosition = new Vector2(700, -300);
         //Attack_2.GetComponent<Image>().sprite = (Sprite)(Resources.Load("GameAssetInScene/UI/UIAttackSprites/IIMW 12.png"));
 
         Attack_1 = Instantiate(Attack_1Prefab, Vector3.zero, Quaternion.identity) as Button;
@@ -241,7 +236,7 @@ public class SetupLocalPlayer : NetworkBehaviour
         Attack_1.transform.localScale = new Vector3(1, 1, 1);
         Attack_1.onClick.RemoveAllListeners();
         Attack_1.onClick.AddListener(delegate { this.gameObject.GetComponent<PlayerController>().OnSwordHammerAttack_1BtnDown(); });
-        Attack_1.GetComponent<RectTransform>().anchoredPosition = new Vector2(600, -300);
+        Attack_1.GetComponent<RectTransform>().anchoredPosition = new Vector2(500, -300);
         //Attack_1.GetComponent<Image>().sprite = (Sprite)(Resources.Load("GameAssetInScene/UI/UIAttackSprites/IIMW 1.png"));
 
 

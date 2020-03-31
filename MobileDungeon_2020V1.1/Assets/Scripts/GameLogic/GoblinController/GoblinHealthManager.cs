@@ -15,15 +15,17 @@ public class GoblinHealthManager : MonoBehaviour
     private float Defense { get; set; }
 
     public float GetHealth() { return this.Health; }
-    public void SetHealth(float _Damage)
+    public float GetDefense() { return this.Defense; }
+
+    public void SetHealth(float _Health) { this.Health = _Health; }   
+    public void SetDefense(float _Defense) { this.Defense = _Defense; }
+    public void SetCurrentHealth(float _Damage)
     {
         if (this.Health - _Damage >= 0)
             this.Health -= _Damage;
         else
             this.Health = 0;
     }
-    public float GetDefense() { return this.Defense; }
-    public void SetDefense(float _Defense) { this.Defense = _Defense; }
 
     void Start()
     {
@@ -45,17 +47,20 @@ public class GoblinHealthManager : MonoBehaviour
             case "WeaponHammer":
                 Hammer _CloneReferenceHammer;
                 _CloneReferenceHammer = _PlayerWeapon.gameObject.GetComponent<HammerController>().ReferenceWeapon;
-                SetHealth(_CloneReferenceHammer.GetDamage() - this.GetDefense());
+                SetCurrentHealth(this.Health-Mathf.Abs(_CloneReferenceHammer.GetDamage() - this.GetDefense()));
+                slider.value = this.GetHealth();
                 break;
             case "WeaponSword":
                 Sword _CloneReferenceSword;
                 _CloneReferenceSword = _PlayerWeapon.gameObject.GetComponent<SwordController>().ReferenceWeapon;
-                SetHealth(_CloneReferenceSword.GetDamage() - this.GetDefense());
+                SetCurrentHealth(Mathf.Abs(_CloneReferenceSword.GetDamage() - this.GetDefense()));
+                slider.value = this.GetHealth();
                 break;
             case "WeaponBow":
                 Bow _CloneReferenceBow;
                 _CloneReferenceBow = _PlayerWeapon.gameObject.GetComponent<BowController>().ReferenceWeapon;
-                SetHealth(_CloneReferenceBow.GetDamage() - this.GetDefense());
+                SetCurrentHealth(Mathf.Abs(_CloneReferenceBow.GetDamage() - this.GetDefense()));
+                slider.value = this.GetHealth();
                 break;
         }
 

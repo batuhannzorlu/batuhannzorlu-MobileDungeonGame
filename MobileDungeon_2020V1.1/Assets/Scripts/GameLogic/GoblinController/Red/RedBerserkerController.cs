@@ -20,8 +20,13 @@ public class RedBerserkerController : GoblinMovementManager
     }
     void FixedUpdate()
     {
-        this.Attack(anim, redberserker.GetAttackSpeed(), redberserker.GetDamage(), redberserker.GetCriticalDamage(), redberserker.GetCriticalPercentage(),3);
-        this.Chase(nav, anim, redberserker.GetMoveSpeeed());
-        this.HangAround(anim, 35);
+        if (this.gameObject.GetComponent<GoblinHealthManager>().GetHealth() > 0)
+        {
+            this.Attack(anim, redberserker.GetAttackSpeed(), redberserker.GetDamage(), redberserker.GetCriticalDamage(), redberserker.GetCriticalPercentage(), 3);
+            this.Chase(nav, anim, redberserker.GetMoveSpeeed());
+            this.HangAround(anim, 35);
+        }
+        else
+            this.StartCoroutine("Die");
     }
 }

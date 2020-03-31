@@ -5,12 +5,13 @@ using System.Linq;
 using UnityEngine;
 using Mirror;
 using UnityEngine.EventSystems;
+using System;
 
 public class PlayerController : NetworkBehaviour
 {
 
 
-    
+
     public float speed = 6.0f;
     private int Level;
     private string Type;
@@ -24,6 +25,12 @@ public class PlayerController : NetworkBehaviour
     Vector3 DefaultPosition;
 
     private float Damage;
+    BoxCollider Weapon;
+
+    bool Attack_1 = false;
+    bool Attack_2 = false;
+    float Attack_1Speed = 0.8f;
+    float Attack_2Speed = 0.8f;
 
     private void Start()
     {
@@ -49,26 +56,44 @@ public class PlayerController : NetworkBehaviour
             transform.position += Vector3.back * speed * Time.deltaTime;
         }
     }
-
     public void OnSwordHammerAttack_1BtnDown()
     {
-        this.GetComponent<SetupLocalPlayer>().PlayerAnimator.SetTrigger("Attack_1");
-        SetupLocalPlayer.player.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
+        if (!Attack_1)
+        {
+            this.GetComponent<SetupLocalPlayer>().PlayerAnimator.SetTrigger("Attack_1");
+            SetupLocalPlayer.player.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
+            Attack_1 = true;
+            StartCoroutine(Attack_1Density());
+        }
     }
     public void OnSwordHammerAttack_2BtnDown()
     {
-        this.GetComponent<SetupLocalPlayer>().PlayerAnimator.SetTrigger("Attack_2");
-        SetupLocalPlayer.player.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
+        if (!Attack_2)
+        {
+            this.GetComponent<SetupLocalPlayer>().PlayerAnimator.SetTrigger("Attack_2");
+            SetupLocalPlayer.player.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
+            Attack_2 = true;
+            StartCoroutine(Attack_2Density());
+        }
+
     }
+    IEnumerator Attack_1Density()
+    {
+        yield return new WaitForSeconds(Attack_1Speed);
+        Attack_1 = false;
+    }
+    IEnumerator Attack_2Density()
+    {
+        yield return new WaitForSeconds(Attack_1Speed);
+        Attack_2 = false;
+    }
+
+   
     public void OnSwordHammerAttackBtnUp()
     {
-        //StartCoroutine(delay());
         SetupLocalPlayer.player.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         SetupLocalPlayer.player.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
-        //isBlockingOrAttacking = false;
-
     }
-
     private void OnTriggerEnter(Collider collider)
     {
         GameObject CloneObject;

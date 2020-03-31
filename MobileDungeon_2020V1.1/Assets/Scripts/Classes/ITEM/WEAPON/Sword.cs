@@ -46,31 +46,31 @@ namespace Assets.Scripts.Classes.ITEM.WEAPON
             switch (this.GetLevel())
             {
                 case 0:
-                    this.SetDamage(0);
+                    this.SetDamage(20);
                     break;
                 case 1:
-                    this.SetDamage(1);
+                    this.SetDamage(30);
                     break;
                 case 2:
-                    this.SetDamage(2);
+                    this.SetDamage(40);
                     break;
                 case 3:
-                    this.SetDamage(3);
+                    this.SetDamage(50);
                     break;
                 case 4:
-                    this.SetDamage(4);
+                    this.SetDamage(60);
                     break;
                 case 5:
-                    this.SetDamage(5);
+                    this.SetDamage(70);
                     break;
                 case 6:
-                    this.SetDamage(6);
+                    this.SetDamage(80);
                     break;
                 case 7:
-                    this.SetDamage(7);
+                    this.SetDamage(90);
                     break;
                 case 8:
-                    this.SetDamage(8);
+                    this.SetDamage(95);
                     break;
                 case 9:
                     this.SetDamage(9);

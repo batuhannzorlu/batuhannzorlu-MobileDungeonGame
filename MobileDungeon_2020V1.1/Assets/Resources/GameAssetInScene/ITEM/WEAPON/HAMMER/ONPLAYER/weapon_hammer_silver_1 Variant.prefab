@@ -36,6 +36,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: weapon_hammer_silver_1 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 199146, guid: b6fc1f9237039294c8ae56982087b2ae, type: 3}
+      propertyPath: m_TagString
+      value: WeaponHammer
+      objectReference: {fileID: 0}
     - target: {fileID: 410302, guid: b6fc1f9237039294c8ae56982087b2ae, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.068

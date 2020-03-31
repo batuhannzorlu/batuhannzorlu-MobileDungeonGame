@@ -46,7 +46,6 @@ GameObject:
   - component: {fileID: 1896322666679460231}
   - component: {fileID: 6616057135491104603}
   - component: {fileID: -1117091976024031992}
-  - component: {fileID: 369435128}
   - component: {fileID: -2675863662675845458}
   m_Layer: 0
   m_Name: PLAYER
@@ -189,25 +188,6 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   _pet: {fileID: 2416327957210058529, guid: ab2f63c22b8d8f54588b3e9b051b79c1, type: 3}
---- !u!95 &369435128
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1896322666679460254}
-  m_Enabled: 0
-  m_Avatar: {fileID: 9000000, guid: 803a9d702988c6e48a97a7f4f032ddbc, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 1
-  m_ApplyRootMotion: 1
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &-2675863662675845458
 MonoBehaviour:
   m_ObjectHideFlags: 0

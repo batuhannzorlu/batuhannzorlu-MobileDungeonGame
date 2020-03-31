@@ -19,8 +19,14 @@ public class BlueWarriorController : GoblinMovementManager
     }
     void FixedUpdate()
     {
-        this.Attack(anim, bluewarrior.GetAttackSpeed(), bluewarrior.GetDamage(), bluewarrior.GetCriticalDamage(), bluewarrior.GetCriticalPercentage(),3);
-        this.Chase(nav, anim, bluewarrior.GetMoveSpeeed());
-        this.HangAround(anim, 25);
+        if (this.GetComponent<GoblinHealthManager>().GetHealth() > 0)
+        {
+            this.Attack(anim, bluewarrior.GetAttackSpeed(), bluewarrior.GetDamage(), bluewarrior.GetCriticalDamage(), bluewarrior.GetCriticalPercentage(), 3);
+            this.Chase(nav, anim, bluewarrior.GetMoveSpeeed());
+            this.HangAround(anim, 25);
+        }
+        else
+            this.StartCoroutine("Die");
+
     }
 }

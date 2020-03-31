@@ -19,8 +19,14 @@ public class BlueWitchdoctorController : GoblinMovementManager
     }
     void FixedUpdate()
     {
-        this.Attack(anim, bluewitchdoctor.GetAttackSpeed(), bluewitchdoctor.GetDamage(), bluewitchdoctor.GetCriticalDamage(), bluewitchdoctor.GetCriticalPercentage(),13);
-        this.Chase(nav, anim, bluewitchdoctor.GetMoveSpeeed());
-        this.HangAround(anim, 25);
+        if (this.GetComponent<GoblinHealthManager>().GetHealth() > 0)
+        {
+            this.Attack(anim, bluewitchdoctor.GetAttackSpeed(), bluewitchdoctor.GetDamage(), bluewitchdoctor.GetCriticalDamage(), bluewitchdoctor.GetCriticalPercentage(), 13);
+            this.Chase(nav, anim, bluewitchdoctor.GetMoveSpeeed());
+            this.HangAround(anim, 25);
+        }
+        else
+            this.StartCoroutine("Die");
+
     }
 }

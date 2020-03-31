@@ -6,7 +6,7 @@ using UnityEngine.AI;
 
 public class GoblinMovementManager : NetworkBehaviour
 {
-    private int ReferencePlayer;    
+    private int ReferencePlayer;
     protected float VisionDistance = 35;
 
     protected bool IsPlayerInAttackRange = false;
@@ -18,7 +18,8 @@ public class GoblinMovementManager : NetworkBehaviour
     public GameObject FirePrefab;
     BoxCollider Weapon;
 
-    public void Chase(NavMeshAgent nav, Animator anim,float _MoveSpeed)
+
+    public void Chase(NavMeshAgent nav, Animator anim, float _MoveSpeed)
     {
         FindReferencePlayer();
         if (GameManager.Players[ReferencePlayer] == null) return;
@@ -34,7 +35,7 @@ public class GoblinMovementManager : NetworkBehaviour
         else
             nav.enabled = false;
     }
-    public void Attack(Animator anim,float _AttackSpeed,float _Damage,float _CriticalDamage,float _CriticalPercentage,float _AttackRange)
+    public void Attack(Animator anim, float _AttackSpeed, float _Damage, float _CriticalDamage, float _CriticalPercentage, float _AttackRange)
     {
         Vector3 relativePos;
         FindReferencePlayer();
@@ -51,7 +52,7 @@ public class GoblinMovementManager : NetworkBehaviour
             IsPlayerInAttackRange = false;
 
     }
-    public void HangAround(Animator anim,float _VisionDistance)
+    public void HangAround(Animator anim, float _VisionDistance)
     {
         FindReferencePlayer();
         if (GameManager.Players[ReferencePlayer] == null) return;
@@ -63,6 +64,18 @@ public class GoblinMovementManager : NetworkBehaviour
         else
             IsPlayerInHangOutRange = false;
     }
+    public IEnumerator Die()
+    {
+        if (this.GetComponent<GoblinHealthManager>().GetHealth() <= 0)
+        {
+            this.GetComponent<Animator>().Play("Death_1");
+            yield return new WaitForSeconds(3);
+            transform.Translate(-Vector3.up * Time.deltaTime / 3);
+            yield return new WaitForSeconds(4);            
+            Destroy(this.gameObject);
+        }
+    }
+
     protected void FindReferencePlayer()
     {
         Vector3 mindistance = new Vector3();
@@ -80,7 +93,11 @@ public class GoblinMovementManager : NetworkBehaviour
         }
     }
 
-    //BERSERKER-WARRIOR ATTACK
+
+    /// <summary>
+    // ANIMATION EVENTS
+    /// </summary>
+    //BERSERKER-WARRIOR ATTACK 
     private void OnBeginAttack()
     {
         Weapon = this.GetComponentInChildren<BoxCollider>();
@@ -96,6 +113,10 @@ public class GoblinMovementManager : NetworkBehaviour
     private void CreateFire()
     {
         GameObject _Fire = Instantiate(FirePrefab, FirePosition.transform.position, FirePosition.transform.rotation);
-        _Fire.gameObject.GetComponent<Rigidbody>().AddForce((this.transform.forward+new Vector3(0,0.1f,0))*500);
+        _Fire.gameObject.GetComponent<Rigidbody>().AddForce((this.transform.forward + new Vector3(0, 0.1f, 0)) * 500);
     }
+
+
+
+
 }

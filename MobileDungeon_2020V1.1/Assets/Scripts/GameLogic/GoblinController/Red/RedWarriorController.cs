@@ -19,8 +19,13 @@ public class RedWarriorController : GoblinMovementManager
     }
     void FixedUpdate()
     {
-        this.Attack(anim, redwarrior.GetAttackSpeed(), redwarrior.GetDamage(), redwarrior.GetCriticalDamage(), redwarrior.GetCriticalPercentage(),3);
-        this.Chase(nav, anim, redwarrior.GetMoveSpeeed());
-        this.HangAround(anim, 35);
+        if (this.GetComponent<GoblinHealthManager>().GetHealth() > 0)
+        {
+            this.Attack(anim, redwarrior.GetAttackSpeed(), redwarrior.GetDamage(), redwarrior.GetCriticalDamage(), redwarrior.GetCriticalPercentage(), 3);
+            this.Chase(nav, anim, redwarrior.GetMoveSpeeed());
+            this.HangAround(anim, 35);
+        }
+        else
+            this.StartCoroutine("Die");
     }
 }

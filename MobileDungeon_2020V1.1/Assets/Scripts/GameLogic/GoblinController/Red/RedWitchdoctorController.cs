@@ -19,8 +19,14 @@ public class RedWitchdoctorController : GoblinMovementManager
     }
     void FixedUpdate()
     {
-        this.Attack(anim, redwitchdoctor.GetAttackSpeed(), redwitchdoctor.GetDamage(), redwitchdoctor.GetCriticalDamage(), redwitchdoctor.GetCriticalPercentage(),13);
-        this.Chase(nav, anim, redwitchdoctor.GetMoveSpeeed());
-        this.HangAround(anim,35);
+        if (this.GetComponent<GoblinHealthManager>().GetHealth() > 0)
+        {
+            this.Attack(anim, redwitchdoctor.GetAttackSpeed(), redwitchdoctor.GetDamage(), redwitchdoctor.GetCriticalDamage(), redwitchdoctor.GetCriticalPercentage(), 13);
+            this.Chase(nav, anim, redwitchdoctor.GetMoveSpeeed());
+            this.HangAround(anim, 35);
+        }
+        else
+            this.StartCoroutine("Die");
+
     }
 }
