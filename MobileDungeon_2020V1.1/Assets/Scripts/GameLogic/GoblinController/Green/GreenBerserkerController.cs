@@ -16,6 +16,9 @@ public class GreenBerserkerController : GoblinMovementManager
         anim = this.gameObject.GetComponent<Animator>();
         this.gameObject.GetComponent<GoblinHealthManager>().SetHealth(greenberserker.GetHealth());
         this.gameObject.GetComponent<GoblinHealthManager>().SetDefense(greenberserker.GetDefense());
+
+        this.transform.GetComponentInChildren<GoblinWeaponFeatures>().Damage = greenberserker.GetDamage();
+        this.transform.GetComponentInChildren<GoblinWeaponFeatures>().CriticalDamage = greenberserker.GetCriticalDamage();
     }
     void FixedUpdate()
     {      

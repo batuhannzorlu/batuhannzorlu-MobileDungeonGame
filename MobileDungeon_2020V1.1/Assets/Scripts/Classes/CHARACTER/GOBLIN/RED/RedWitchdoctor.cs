@@ -11,6 +11,7 @@ public class RedWitchdoctor : RedGoblin
     {
         this.SetType("RedWitchdoctor");
         this.LoadAssets(this.GetType(), PathGoblinObj);
+        this.SetDamage(this.GetDamage() + 30);
         this.SetGoblinFeatures(_ReferenceRedWitchdoctor);
         this.UnLoadAssets();
     }
@@ -20,22 +21,22 @@ public class RedWitchdoctor : RedGoblin
         switch (this.GetLevel())
         {
             case 0:
-                this.SetDamage(this.GetDamage() + 10);
+                this.SetDamage(this.GetDamage());
                 break;
             case 1:
-                this.SetDamage(this.GetDamage() + 15);
+                this.SetDamage(this.GetDamage() + 21 * 1);
                 break;
             case 2:
-                this.SetDamage(this.GetDamage() + 20);
+                this.SetDamage(this.GetDamage() + 21 * 2);
                 break;
             case 3:
-                this.SetDamage(this.GetDamage() + 25);
+                this.SetDamage(this.GetDamage() + 21 * 3);
                 break;
             case 4:
-                this.SetDamage(this.GetDamage() + 30);
+                this.SetDamage(this.GetDamage() + 21 * 4);
                 break;
             case 5:
-                this.SetDamage(this.GetDamage() + 35);
+                this.SetDamage(this.GetDamage() + 21 * 5);
                 break;
             default:
                 break;

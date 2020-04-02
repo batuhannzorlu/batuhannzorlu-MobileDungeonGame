@@ -12,8 +12,7 @@ public class ArBerserkerController : MonoBehaviour
 
     //HAMMER-SWORD ATTACK
     public void OnAttackBegin()
-    {
-       
+    {      
         Weapon = this.gameObject.GetComponentInChildren<BoxCollider>();
         Weapon.enabled = true;
     }

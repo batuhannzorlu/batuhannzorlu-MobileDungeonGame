@@ -1313,6 +1313,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  FirePosition: {fileID: 0}
+  FirePrefab: {fileID: 0}
 --- !u!114 &3921226368178904562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1327,6 +1329,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  FirePosition: {fileID: 0}
+  FirePrefab: {fileID: 0}
 --- !u!114 &239676132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2164,6 +2168,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.25323105, y: 0.7834407, z: 1.9253342}
   m_Center: {x: 0.00216865, y: 0.083409846, z: 1.6747766}
+--- !u!114 &1948737190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4574556578119741749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec96a605220dd374a8c34be6a2abac25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damage: 0
+  CriticalDamage: 0
 --- !u!1001 &2303285704377975905
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2300,6 +2318,10 @@ PrefabInstance:
     - target: {fileID: 108378, guid: 35f845c9007c27c46ad7cae7b7e7f1c1, type: 3}
       propertyPath: m_Name
       value: weapon_sword_red
+      objectReference: {fileID: 0}
+    - target: {fileID: 108378, guid: 35f845c9007c27c46ad7cae7b7e7f1c1, type: 3}
+      propertyPath: m_TagString
+      value: EnemyWeapon
       objectReference: {fileID: 0}
     - target: {fileID: 401124, guid: 35f845c9007c27c46ad7cae7b7e7f1c1, type: 3}
       propertyPath: m_LocalPosition.x

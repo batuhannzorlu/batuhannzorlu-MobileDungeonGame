@@ -18,22 +18,22 @@ public class GreenBerserker : GreenGoblin
         switch (this.GetLevel())
         {
             case 0:
-                this.SetDamage(this.GetDamage() + 10);
+                this.SetDamage(this.GetDamage());
                 break;
             case 1:
-                this.SetDamage(this.GetDamage() + 15);
+                this.SetDamage(this.GetDamage() + 5 * 1);
                 break;
             case 2:
-                this.SetDamage(this.GetDamage() + 20);
+                this.SetDamage(this.GetDamage() + 5 * 2);
                 break;
             case 3:
-                this.SetDamage(this.GetDamage() + 25);
+                this.SetDamage(this.GetDamage() + 5 * 3);
                 break;
             case 4:
-                this.SetDamage(this.GetDamage() + 30);
+                this.SetDamage(this.GetDamage() + 5 * 4);
                 break;
             case 5:
-                this.SetDamage(this.GetDamage() + 35);
+                this.SetDamage(this.GetDamage() + 5 * 5);
                 break;
             default:
                 break;

@@ -8,7 +8,7 @@ public class BlueGoblin : Goblin
     {
         this.SetHealth(200);
         this.SetDefense(200);
-        this.SetDamage(200);
+        this.SetDamage(160);
         this.SetMoveSpeeed(200);
         this.SetType("BlueGoblin");
         this.SetCriticalDamage(200);

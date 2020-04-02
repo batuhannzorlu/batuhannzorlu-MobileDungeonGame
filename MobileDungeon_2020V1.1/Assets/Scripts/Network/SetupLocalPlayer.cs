@@ -8,22 +8,32 @@ using UnityEngine.Events;
 
 public class SetupLocalPlayer : NetworkBehaviour
 {
+    public bool IsPlayerSetup=false;
+
+    public VirtualJoystick moveJoystick_Prefab;
+    public VirtualJoystick moveJoystick;
+
     Button Attack_1;
     Button Attack_2;
     public Button Attack_1Prefab;
     public Button Attack_2Prefab;
 
+    public GameObject HealthBar;
+    public GameObject HealthBar_Prefab;
+
     public Text TextPrefab;
     public Text text;
     public Transform textPos;
 
-    public string Nick = "Batuhan";
+
     public string ChoosenClass;
 
     public static Transform player;
     public static GameObject PlayerArmor;
     public static GameObject PlayerWeapon;
     public static GameObject PlayerShield;
+    string Nick = "Batuhan";
+
 
     GameObject WeaponHand;
     GameObject ShieldHand;
@@ -52,7 +62,7 @@ public class SetupLocalPlayer : NetworkBehaviour
         }
         Debug.Log("GAMEMANAGER PLAYERS: " + GameManager.Players[0]);
         Debug.Log("PLAYER LİST COUNT: " + GameManager.Players.Count);
-        ChoosenClass = "SwordBerserker";
+        ChoosenClass = "HammerBerserker";
         switch (ChoosenClass)
         {
             case "HammerBerserker":
@@ -64,6 +74,7 @@ public class SetupLocalPlayer : NetworkBehaviour
                 SetupDefaultSwordBerserker();
                 PlayerAnimator = transform.GetChild(1).gameObject.GetComponent<Animator>();
                 SetupSwordBerserkerUI();
+                IsPlayerSetup = true;
                 break;
             case "CrossBow":
                 SetupDefaultCrossBow();
@@ -150,7 +161,7 @@ public class SetupLocalPlayer : NetworkBehaviour
     {
         Berserker berserker;
         string Key = "Sword";
-        berserker = new Berserker(Nick, Key);
+        berserker = new Berserker("Batuhan", Key);
         PlayerArmor = berserker.GetArmor();
         Name = PlayerArmor.gameObject.name + "(Clone)";
         PlayerArmor.transform.localScale = new Vector3(1, 1, 1);
@@ -178,20 +189,14 @@ public class SetupLocalPlayer : NetworkBehaviour
         CloneShield = Instantiate(PlayerShield, new Vector3(ShieldHand.transform.position.x, ShieldHand.transform.position.y, ShieldHand.transform.position.z), ShieldHand.transform.rotation, ShieldHand.transform);
         CloneShield.name = PlayerShield.name;
 
-        float x = berserker.GetAttackDamage();
-        float y = berserker.GetDefense();
-        float z = berserker.GetMovementSpeed();
-        float t = berserker.GetAttackSpeed();
-        string l = berserker.GetNick();
-
-        Debug.Log(" Nick: " + l);
-        Debug.Log(Nick + " Damage: " + x);
-        Debug.Log(Nick + " Defense: " + y);
-        Debug.Log(Nick + " MovementSpeed: " + z);
-        Debug.Log(Nick + " AttackSpeed: " + t);
+        this.GetComponent<PlayerController>().Defense = berserker.GetDefense();
+        this.GetComponent<PlayerController>().AttackDamage = berserker.GetAttackDamage();
+        this.GetComponent<PlayerController>().Health = berserker.GetHealth();
+        this.GetComponent<PlayerController>().MovementSpeed = berserker.GetMovementSpeed();
+        this.GetComponent<PlayerController>().AttackSpeed = berserker.GetAttackSpeed();
     }
 
-   
+
     void SetupDefaultCrossBow()
     {
 
@@ -228,7 +233,7 @@ public class SetupLocalPlayer : NetworkBehaviour
         Attack_2.transform.localScale = new Vector3(1, 1, 1);
         Attack_2.onClick.RemoveAllListeners();
         Attack_2.onClick.AddListener(delegate { this.gameObject.GetComponent<PlayerController>().OnSwordHammerAttack_2BtnDown(); });
-        Attack_2.GetComponent<RectTransform>().anchoredPosition = new Vector2(700, -300);
+        Attack_2.GetComponent<RectTransform>().anchoredPosition = new Vector2(700, -250);
         //Attack_2.GetComponent<Image>().sprite = (Sprite)(Resources.Load("GameAssetInScene/UI/UIAttackSprites/IIMW 12.png"));
 
         Attack_1 = Instantiate(Attack_1Prefab, Vector3.zero, Quaternion.identity) as Button;
@@ -236,10 +241,15 @@ public class SetupLocalPlayer : NetworkBehaviour
         Attack_1.transform.localScale = new Vector3(1, 1, 1);
         Attack_1.onClick.RemoveAllListeners();
         Attack_1.onClick.AddListener(delegate { this.gameObject.GetComponent<PlayerController>().OnSwordHammerAttack_1BtnDown(); });
-        Attack_1.GetComponent<RectTransform>().anchoredPosition = new Vector2(500, -300);
+        Attack_1.GetComponent<RectTransform>().anchoredPosition = new Vector2(500, -250);
         //Attack_1.GetComponent<Image>().sprite = (Sprite)(Resources.Load("GameAssetInScene/UI/UIAttackSprites/IIMW 1.png"));
 
+        HealthBar = Instantiate(HealthBar_Prefab, Vector3.zero, Quaternion.identity) as GameObject;
+        HealthBar.transform.SetParent(canvas.transform);
+        HealthBar.transform.localScale = new Vector3(0.25F, 0.25F, 0.25F);
+        HealthBar.GetComponent<RectTransform>().anchoredPosition = new Vector2(100, -100);
 
+        SetupPlayerJoyStick();
     }
     void SetupCrossBowUI()
     {
@@ -248,11 +258,18 @@ public class SetupLocalPlayer : NetworkBehaviour
         Attack_1.transform.SetParent(canvas.transform);
         Attack_1.transform.localScale = new Vector3(1, 1, 1);
         Attack_1.onClick.RemoveAllListeners();
-      //  Attack_1.onClick.AddListener(delegate { this.gameObject.GetComponent<PlayerController>().OnSwordHammerAttackBtnDown(); });
+        //  Attack_1.onClick.AddListener(delegate { this.gameObject.GetComponent<PlayerController>().OnSwordHammerAttackBtnDown(); });
         Attack_1.GetComponent<RectTransform>().anchoredPosition = new Vector2(600, 0);
         //Attack_1.image = (Image)(Resources.Load("GameAssetInScene/UI/UIAttackSprites/IIMW 15"));
     }
 
-
+    void SetupPlayerJoyStick()
+    {
+        GameObject canvas = GameObject.FindWithTag("MainCanvas");
+        moveJoystick = Instantiate(moveJoystick_Prefab, Vector3.zero, Quaternion.identity) as VirtualJoystick;
+        moveJoystick.transform.SetParent(canvas.transform);
+        moveJoystick.transform.localScale = new Vector3(1, 1, 1);
+        moveJoystick.GetComponent<RectTransform>().anchoredPosition = new Vector2(100, 100);
+    }
 
 }

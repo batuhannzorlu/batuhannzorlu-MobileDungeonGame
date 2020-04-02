@@ -33,7 +33,7 @@ public class Berserker : Character
                 this.Defense = DefaultArberserker.GetDefense();
                  this.AttackSpeed = 1f;
                 this.MovementSpeed = 100;
-                this.Health = 100;
+                this.Health = 2000;
                 break;
             case "Sword":
                 this.Type = "PlayerBerserkerSword";
@@ -45,7 +45,7 @@ public class Berserker : Character
                 this.Defense = DefaultArberserker.GetDefense();
                 this.AttackSpeed = 1.5f;
                 this.MovementSpeed = 110;
-                this.Health = 100;
+                this.Health = 2000;
                 break;
             default:
                 break;

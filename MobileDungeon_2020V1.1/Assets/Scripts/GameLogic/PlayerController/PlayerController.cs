@@ -6,16 +6,14 @@ using UnityEngine;
 using Mirror;
 using UnityEngine.EventSystems;
 using System;
+using UIHealthAlchemy;
 
 public class PlayerController : NetworkBehaviour
 {
 
 
-
     public float speed = 6.0f;
     private int Level;
-    private string Type;
-    private float Defense;
     private string Sprite;
     private float CriticalDamage;
     private float CriticalPercentange;
@@ -29,39 +27,52 @@ public class PlayerController : NetworkBehaviour
 
     bool Attack_1 = false;
     bool Attack_2 = false;
-    float Attack_1Speed = 0.8f;
-    float Attack_2Speed = 0.8f;
+    float Attack_1Speed = 0.4f;
+    float Attack_2Speed = 0.4f;
 
+    public string Type;
+    public float AttackDamage;
+    public float Defense;
+    public Vector3 Location;
+    public string Nick = "Batuhan";
+    public float Health;
+    public Inventory Inventory;
+    public float MovementSpeed;
+    public float AttackSpeed;
+    Vector3 dir;
+
+    private void Awake()
+    {
+        this.GetComponent<SetupLocalPlayer>().IsPlayerSetup = false;
+    }
     private void Start()
     {
-
-
+        dir = Vector3.zero;
     }
     private void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.RightArrow))
+
+        if (this.GetComponent<SetupLocalPlayer>().IsPlayerSetup)
         {
-            transform.position += Vector3.right * speed * Time.deltaTime;
+
+            if (dir.magnitude > 1)
+                dir.Normalize();
+
+            dir = this.GetComponent<SetupLocalPlayer>().moveJoystick.InputDirection;
+            Vector3 rotateDir = Camera.main.transform.TransformDirection(dir);
+            this.transform.GetChild(1).GetComponent<Animator>().SetFloat("Speed", Mathf.Abs(dir.x) + Mathf.Abs(dir.z));
+            rotateDir = new Vector3(rotateDir.x, 0, rotateDir.z);
+            rotateDir = rotateDir.normalized * dir.magnitude;
+            this.GetComponent<Rigidbody>().velocity = rotateDir * 10;
+            transform.rotation = Quaternion.LookRotation(rotateDir);
         }
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            transform.position += Vector3.left * speed * Time.deltaTime;
-        }
-        if (Input.GetKey(KeyCode.UpArrow))
-        {
-            transform.position += Vector3.forward * speed * Time.deltaTime;
-        }
-        if (Input.GetKey(KeyCode.DownArrow))
-        {
-            transform.position += Vector3.back * speed * Time.deltaTime;
-        }
+
     }
     public void OnSwordHammerAttack_1BtnDown()
     {
         if (!Attack_1)
         {
             this.GetComponent<SetupLocalPlayer>().PlayerAnimator.SetTrigger("Attack_1");
-            SetupLocalPlayer.player.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
             Attack_1 = true;
             StartCoroutine(Attack_1Density());
         }
@@ -71,7 +82,6 @@ public class PlayerController : NetworkBehaviour
         if (!Attack_2)
         {
             this.GetComponent<SetupLocalPlayer>().PlayerAnimator.SetTrigger("Attack_2");
-            SetupLocalPlayer.player.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
             Attack_2 = true;
             StartCoroutine(Attack_2Density());
         }
@@ -88,12 +98,21 @@ public class PlayerController : NetworkBehaviour
         Attack_2 = false;
     }
 
-   
+
     public void OnSwordHammerAttackBtnUp()
     {
-        SetupLocalPlayer.player.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
-        SetupLocalPlayer.player.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
+
     }
+
+    public void SetCurrentHealth(float _Damage)
+    {
+        if (this.Health - _Damage >= 0)
+            this.Health -= _Damage;
+        else
+            this.Health = 0;
+    }
+
+
     private void OnTriggerEnter(Collider collider)
     {
         GameObject CloneObject;
@@ -277,8 +296,14 @@ public class PlayerController : NetworkBehaviour
         {
 
         }
-        if (collider.tag.StartsWith("Pet"))
+        if (collider.tag.StartsWith("Enemy"))
         {
+            if (collider.tag == "EnemyWeapon")
+            {
+                SetCurrentHealth(collider.gameObject.GetComponent<GoblinWeaponFeatures>().Damage - this.Defense);
+                this.GetComponent<SetupLocalPlayer>().HealthBar.GetComponent<MaterialHealhBar>().Value = Health / 2000;
+                Debug.Log(collider.gameObject.GetComponent<GoblinWeaponFeatures>().Damage - this.Defense);
+            }
 
         }
 

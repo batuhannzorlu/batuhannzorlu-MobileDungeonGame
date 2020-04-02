@@ -1,0 +1,125 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Attack
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: biped:mr:root_jnt
+    m_Weight: 1
+  - m_Path: biped:mr:root_jnt/biped:mr:L_Leg_Hip
+    m_Weight: 0
+  - m_Path: biped:mr:root_jnt/biped:mr:L_Leg_Hip/biped:mr:L_Leg_Knee_jnt
+    m_Weight: 0
+  - m_Path: biped:mr:root_jnt/biped:mr:L_Leg_Hip/biped:mr:L_Leg_Knee_jnt/biped:mr:L_Leg_Ankle_jnt
+    m_Weight: 0
+  - m_Path: biped:mr:root_jnt/biped:mr:L_Leg_Hip/biped:mr:L_Leg_Knee_jnt/biped:mr:L_Leg_Ankle_jnt/biped:mr:L_Leg_Ball_jnt
+    m_Weight: 0
+  - m_Path: biped:mr:root_jnt/biped:mr:L_Leg_Hip/biped:mr:L_Leg_Knee_jnt/biped:mr:L_Leg_Ankle_jnt/biped:mr:L_Leg_Ball_jnt/biped:mr:L_Leg_Toe
+    m_Weight: 0
+  - m_Path: biped:mr:root_jnt/biped:mr:R_Leg_Hip
+    m_Weight: 0
+  - m_Path: biped:mr:root_jnt/biped:mr:R_Leg_Hip/biped:mr:R_Leg_Knee_jnt
+    m_Weight: 0
+  - m_Path: biped:mr:root_jnt/biped:mr:R_Leg_Hip/biped:mr:R_Leg_Knee_jnt/biped:mr:R_Leg_Ankle_jnt
+    m_Weight: 0
+  - m_Path: biped:mr:root_jnt/biped:mr:R_Leg_Hip/biped:mr:R_Leg_Knee_jnt/biped:mr:R_Leg_Ankle_jnt/biped:mr:R_Leg_Ball_jnt
+    m_Weight: 0
+  - m_Path: biped:mr:root_jnt/biped:mr:R_Leg_Hip/biped:mr:R_Leg_Knee_jnt/biped:mr:R_Leg_Ankle_jnt/biped:mr:R_Leg_Ball_jnt/biped:mr:R_Leg_Toe
+    m_Weight: 0
+  - m_Path: biped:mr:root_jnt/biped:mr:spine_01_jnt
+    m_Weight: 1
+  - m_Path: biped:mr:root_jnt/biped:mr:spine_01_jnt/biped:mr:spine_02_jnt
+    m_Weight: 1
+  - m_Path: biped:mr:root_jnt/biped:mr:spine_01_jnt/biped:mr:spine_02_jnt/biped:mr:L_Arm_Clavicle_jnt
+    m_Weight: 1
+  - m_Path: biped:mr:root_jnt/biped:mr:spine_01_jnt/biped:mr:spine_02_jnt/biped:mr:L_Arm_Clavicle_jnt/biped:mr:L_Arm_Shoulder_jnt
+    m_Weight: 1
+  - m_Path: biped:mr:root_jnt/biped:mr:spine_01_jnt/biped:mr:spine_02_jnt/biped:mr:L_Arm_Clavicle_jnt/biped:mr:L_Arm_Shoulder_jnt/biped:mr:L_elbow_jnt
+    m_Weight: 1
+  - m_Path: biped:mr:root_jnt/biped:mr:spine_01_jnt/biped:mr:spine_02_jnt/biped:mr:L_Arm_Clavicle_jnt/biped:mr:L_Arm_Shoulder_jnt/biped:mr:L_elbow_jnt/biped:mr:L_wrist_jnt
+    m_Weight: 1
+  - m_Path: biped:mr:root_jnt/biped:mr:spine_01_jnt/biped:mr:spine_02_jnt/biped:mr:L_Arm_Clavicle_jnt/biped:mr:L_Arm_Shoulder_jnt/biped:mr:L_elbow_jnt/biped:mr:L_wrist_jnt/biped:mr:L_Hands_Index_01_jnt
+    m_Weight: 1
+  - m_Path: biped:mr:root_jnt/biped:mr:spine_01_jnt/biped:mr:spine_02_jnt/biped:mr:L_Arm_Clavicle_jnt/biped:mr:L_Arm_Shoulder_jnt/biped:mr:L_elbow_jnt/biped:mr:L_wrist_jnt/biped:mr:L_Hands_Index_01_jnt/biped:mr:L_Hands_Index_02_jnt
+    m_Weight: 1
+  - m_Path: biped:mr:root_jnt/biped:mr:spine_01_jnt/biped:mr:spine_02_jnt/biped:mr:L_Arm_Clavicle_jnt/biped:mr:L_Arm_Shoulder_jnt/biped:mr:L_elbow_jnt/biped:mr:L_wrist_jnt/biped:mr:L_Hands_Index_01_jnt/biped:mr:L_Hands_Index_02_jnt/biped:mr:L_Hands_Index_03_jnt
+    m_Weight: 1
+  - m_Path: biped:mr:root_jnt/biped:mr:spine_01_jnt/biped:mr:spine_02_jnt/biped:mr:L_Arm_Clavicle_jnt/biped:mr:L_Arm_Shoulder_jnt/biped:mr:L_elbow_jnt/biped:mr:L_wrist_jnt/biped:mr:L_Hands_Middle_01_jnt
+    m_Weight: 1
+  - m_Path: biped:mr:root_jnt/biped:mr:spine_01_jnt/biped:mr:spine_02_jnt/biped:mr:L_Arm_Clavicle_jnt/biped:mr:L_Arm_Shoulder_jnt/biped:mr:L_elbow_jnt/biped:mr:L_wrist_jnt/biped:mr:L_Hands_Middle_01_jnt/biped:mr:L_Hands_Middle_02_jnt
+    m_Weight: 1
+  - m_Path: biped:mr:root_jnt/biped:mr:spine_01_jnt/biped:mr:spine_02_jnt/biped:mr:L_Arm_Clavicle_jnt/biped:mr:L_Arm_Shoulder_jnt/biped:mr:L_elbow_jnt/biped:mr:L_wrist_jnt/biped:mr:L_Hands_Middle_01_jnt/biped:mr:L_Hands_Middle_02_jnt/biped:mr:L_Hands_Middle_03_jnt
+    m_Weight: 1
+  - m_Path: biped:mr:root_jnt/biped:mr:spine_01_jnt/biped:mr:spine_02_jnt/biped:mr:L_Arm_Clavicle_jnt/biped:mr:L_Arm_Shoulder_jnt/biped:mr:L_elbow_jnt/biped:mr:L_wrist_jnt/biped:mr:L_Hands_Pinky_01_jnt
+    m_Weight: 1
+  - m_Path: biped:mr:root_jnt/biped:mr:spine_01_jnt/biped:mr:spine_02_jnt/biped:mr:L_Arm_Clavicle_jnt/biped:mr:L_Arm_Shoulder_jnt/biped:mr:L_elbow_jnt/biped:mr:L_wrist_jnt/biped:mr:L_Hands_Pinky_01_jnt/biped:mr:L_Hands_Pinky_02_jnt
+    m_Weight: 1
+  - m_Path: biped:mr:root_jnt/biped:mr:spine_01_jnt/biped:mr:spine_02_jnt/biped:mr:L_Arm_Clavicle_jnt/biped:mr:L_Arm_Shoulder_jnt/biped:mr:L_elbow_jnt/biped:mr:L_wrist_jnt/biped:mr:L_Hands_Pinky_01_jnt/biped:mr:L_Hands_Pinky_02_jnt/biped:mr:L_Hands_Pinky_03_jnt
+    m_Weight: 1
+  - m_Path: biped:mr:root_jnt/biped:mr:spine_01_jnt/biped:mr:spine_02_jnt/biped:mr:L_Arm_Clavicle_jnt/biped:mr:L_Arm_Shoulder_jnt/biped:mr:L_elbow_jnt/biped:mr:L_wrist_jnt/biped:mr:L_Hands_Ring_01_jnt
+    m_Weight: 1
+  - m_Path: biped:mr:root_jnt/biped:mr:spine_01_jnt/biped:mr:spine_02_jnt/biped:mr:L_Arm_Clavicle_jnt/biped:mr:L_Arm_Shoulder_jnt/biped:mr:L_elbow_jnt/biped:mr:L_wrist_jnt/biped:mr:L_Hands_Ring_01_jnt/biped:mr:L_Hands_Ring_02_jnt
+    m_Weight: 1
+  - m_Path: biped:mr:root_jnt/biped:mr:spine_01_jnt/biped:mr:spine_02_jnt/biped:mr:L_Arm_Clavicle_jnt/biped:mr:L_Arm_Shoulder_jnt/biped:mr:L_elbow_jnt/biped:mr:L_wrist_jnt/biped:mr:L_Hands_Ring_01_jnt/biped:mr:L_Hands_Ring_02_jnt/biped:mr:L_Hands_Ring_03_jnt
+    m_Weight: 1
+  - m_Path: biped:mr:root_jnt/biped:mr:spine_01_jnt/biped:mr:spine_02_jnt/biped:mr:L_Arm_Clavicle_jnt/biped:mr:L_Arm_Shoulder_jnt/biped:mr:L_elbow_jnt/biped:mr:L_wrist_jnt/biped:mr:L_Hands_Thumb_01_jnt
+    m_Weight: 1
+  - m_Path: biped:mr:root_jnt/biped:mr:spine_01_jnt/biped:mr:spine_02_jnt/biped:mr:L_Arm_Clavicle_jnt/biped:mr:L_Arm_Shoulder_jnt/biped:mr:L_elbow_jnt/biped:mr:L_wrist_jnt/biped:mr:L_Hands_Thumb_01_jnt/biped:mr:L_Hands_Thumb_02_jnt
+    m_Weight: 1
+  - m_Path: biped:mr:root_jnt/biped:mr:spine_01_jnt/biped:mr:spine_02_jnt/biped:mr:L_Arm_Clavicle_jnt/biped:mr:L_Arm_Shoulder_jnt/biped:mr:L_elbow_jnt/biped:mr:L_wrist_jnt/biped:mr:L_Hands_Thumb_01_jnt/biped:mr:L_Hands_Thumb_02_jnt/biped:mr:L_Hands_Thumb_03_jnt
+    m_Weight: 1
+  - m_Path: biped:mr:root_jnt/biped:mr:spine_01_jnt/biped:mr:spine_02_jnt/biped:mr:L_Arm_Clavicle_jnt/biped:mr:L_Arm_Shoulder_jnt/biped:mr:L_elbow_jnt/biped:mr:L_wrist_jnt/biped:mr:L_Shield_AttachMent_jnt
+    m_Weight: 1
+  - m_Path: biped:mr:root_jnt/biped:mr:spine_01_jnt/biped:mr:spine_02_jnt/biped:mr:L_Arm_Clavicle_jnt/biped:mr:L_Arm_Shoulder_jnt/biped:mr:L_elbow_jnt/biped:mr:L_wrist_jnt/biped:mr:L_WeaponAttachMent_jnt
+    m_Weight: 1
+  - m_Path: biped:mr:root_jnt/biped:mr:spine_01_jnt/biped:mr:spine_02_jnt/biped:mr:Neck_jnt
+    m_Weight: 1
+  - m_Path: biped:mr:root_jnt/biped:mr:spine_01_jnt/biped:mr:spine_02_jnt/biped:mr:Neck_jnt/biped:mr:NA_Head
+    m_Weight: 1
+  - m_Path: biped:mr:root_jnt/biped:mr:spine_01_jnt/biped:mr:spine_02_jnt/biped:mr:R_Arm_Clavicle_jnt
+    m_Weight: 1
+  - m_Path: biped:mr:root_jnt/biped:mr:spine_01_jnt/biped:mr:spine_02_jnt/biped:mr:R_Arm_Clavicle_jnt/biped:mr:R_Arm_Shoulder_jnt
+    m_Weight: 1
+  - m_Path: biped:mr:root_jnt/biped:mr:spine_01_jnt/biped:mr:spine_02_jnt/biped:mr:R_Arm_Clavicle_jnt/biped:mr:R_Arm_Shoulder_jnt/biped:mr:R_elbow_jnt
+    m_Weight: 1
+  - m_Path: biped:mr:root_jnt/biped:mr:spine_01_jnt/biped:mr:spine_02_jnt/biped:mr:R_Arm_Clavicle_jnt/biped:mr:R_Arm_Shoulder_jnt/biped:mr:R_elbow_jnt/biped:mr:R_wrist_jnt
+    m_Weight: 1
+  - m_Path: biped:mr:root_jnt/biped:mr:spine_01_jnt/biped:mr:spine_02_jnt/biped:mr:R_Arm_Clavicle_jnt/biped:mr:R_Arm_Shoulder_jnt/biped:mr:R_elbow_jnt/biped:mr:R_wrist_jnt/biped:mr:R_Hands_Index_01_jnt
+    m_Weight: 1
+  - m_Path: biped:mr:root_jnt/biped:mr:spine_01_jnt/biped:mr:spine_02_jnt/biped:mr:R_Arm_Clavicle_jnt/biped:mr:R_Arm_Shoulder_jnt/biped:mr:R_elbow_jnt/biped:mr:R_wrist_jnt/biped:mr:R_Hands_Index_01_jnt/biped:mr:R_Hands_Index_02_jnt
+    m_Weight: 1
+  - m_Path: biped:mr:root_jnt/biped:mr:spine_01_jnt/biped:mr:spine_02_jnt/biped:mr:R_Arm_Clavicle_jnt/biped:mr:R_Arm_Shoulder_jnt/biped:mr:R_elbow_jnt/biped:mr:R_wrist_jnt/biped:mr:R_Hands_Index_01_jnt/biped:mr:R_Hands_Index_02_jnt/biped:mr:R_Hands_Index_03_jnt
+    m_Weight: 1
+  - m_Path: biped:mr:root_jnt/biped:mr:spine_01_jnt/biped:mr:spine_02_jnt/biped:mr:R_Arm_Clavicle_jnt/biped:mr:R_Arm_Shoulder_jnt/biped:mr:R_elbow_jnt/biped:mr:R_wrist_jnt/biped:mr:R_Hands_Middle_01_jnt
+    m_Weight: 1
+  - m_Path: biped:mr:root_jnt/biped:mr:spine_01_jnt/biped:mr:spine_02_jnt/biped:mr:R_Arm_Clavicle_jnt/biped:mr:R_Arm_Shoulder_jnt/biped:mr:R_elbow_jnt/biped:mr:R_wrist_jnt/biped:mr:R_Hands_Middle_01_jnt/biped:mr:R_Hands_Middle_02_jnt
+    m_Weight: 1
+  - m_Path: biped:mr:root_jnt/biped:mr:spine_01_jnt/biped:mr:spine_02_jnt/biped:mr:R_Arm_Clavicle_jnt/biped:mr:R_Arm_Shoulder_jnt/biped:mr:R_elbow_jnt/biped:mr:R_wrist_jnt/biped:mr:R_Hands_Middle_01_jnt/biped:mr:R_Hands_Middle_02_jnt/biped:mr:R_Hands_Middle_03_jnt
+    m_Weight: 1
+  - m_Path: biped:mr:root_jnt/biped:mr:spine_01_jnt/biped:mr:spine_02_jnt/biped:mr:R_Arm_Clavicle_jnt/biped:mr:R_Arm_Shoulder_jnt/biped:mr:R_elbow_jnt/biped:mr:R_wrist_jnt/biped:mr:R_Hands_Pinky_01_jnt
+    m_Weight: 1
+  - m_Path: biped:mr:root_jnt/biped:mr:spine_01_jnt/biped:mr:spine_02_jnt/biped:mr:R_Arm_Clavicle_jnt/biped:mr:R_Arm_Shoulder_jnt/biped:mr:R_elbow_jnt/biped:mr:R_wrist_jnt/biped:mr:R_Hands_Pinky_01_jnt/biped:mr:R_Hands_Pinky_02_jnt
+    m_Weight: 1
+  - m_Path: biped:mr:root_jnt/biped:mr:spine_01_jnt/biped:mr:spine_02_jnt/biped:mr:R_Arm_Clavicle_jnt/biped:mr:R_Arm_Shoulder_jnt/biped:mr:R_elbow_jnt/biped:mr:R_wrist_jnt/biped:mr:R_Hands_Pinky_01_jnt/biped:mr:R_Hands_Pinky_02_jnt/biped:mr:R_Hands_Pinky_03_jnt
+    m_Weight: 1
+  - m_Path: biped:mr:root_jnt/biped:mr:spine_01_jnt/biped:mr:spine_02_jnt/biped:mr:R_Arm_Clavicle_jnt/biped:mr:R_Arm_Shoulder_jnt/biped:mr:R_elbow_jnt/biped:mr:R_wrist_jnt/biped:mr:R_Hands_Ring_01_jnt
+    m_Weight: 1
+  - m_Path: biped:mr:root_jnt/biped:mr:spine_01_jnt/biped:mr:spine_02_jnt/biped:mr:R_Arm_Clavicle_jnt/biped:mr:R_Arm_Shoulder_jnt/biped:mr:R_elbow_jnt/biped:mr:R_wrist_jnt/biped:mr:R_Hands_Ring_01_jnt/biped:mr:R_Hands_Ring_02_jnt
+    m_Weight: 1
+  - m_Path: biped:mr:root_jnt/biped:mr:spine_01_jnt/biped:mr:spine_02_jnt/biped:mr:R_Arm_Clavicle_jnt/biped:mr:R_Arm_Shoulder_jnt/biped:mr:R_elbow_jnt/biped:mr:R_wrist_jnt/biped:mr:R_Hands_Ring_01_jnt/biped:mr:R_Hands_Ring_02_jnt/biped:mr:R_Hands_Ring_03_jnt
+    m_Weight: 1
+  - m_Path: biped:mr:root_jnt/biped:mr:spine_01_jnt/biped:mr:spine_02_jnt/biped:mr:R_Arm_Clavicle_jnt/biped:mr:R_Arm_Shoulder_jnt/biped:mr:R_elbow_jnt/biped:mr:R_wrist_jnt/biped:mr:R_Hands_Thumb_01_jnt
+    m_Weight: 1
+  - m_Path: biped:mr:root_jnt/biped:mr:spine_01_jnt/biped:mr:spine_02_jnt/biped:mr:R_Arm_Clavicle_jnt/biped:mr:R_Arm_Shoulder_jnt/biped:mr:R_elbow_jnt/biped:mr:R_wrist_jnt/biped:mr:R_Hands_Thumb_01_jnt/biped:mr:R_Hands_Thumb_02_jnt
+    m_Weight: 1
+  - m_Path: biped:mr:root_jnt/biped:mr:spine_01_jnt/biped:mr:spine_02_jnt/biped:mr:R_Arm_Clavicle_jnt/biped:mr:R_Arm_Shoulder_jnt/biped:mr:R_elbow_jnt/biped:mr:R_wrist_jnt/biped:mr:R_Hands_Thumb_01_jnt/biped:mr:R_Hands_Thumb_02_jnt/biped:mr:R_Hands_Thumb_03_jnt
+    m_Weight: 1
+  - m_Path: biped:mr:root_jnt/biped:mr:spine_01_jnt/biped:mr:spine_02_jnt/biped:mr:R_Arm_Clavicle_jnt/biped:mr:R_Arm_Shoulder_jnt/biped:mr:R_elbow_jnt/biped:mr:R_wrist_jnt/biped:mr:R_WeaponAttachMent_jnt
+    m_Weight: 1

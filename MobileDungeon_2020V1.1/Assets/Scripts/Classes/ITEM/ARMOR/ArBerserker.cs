@@ -41,31 +41,31 @@ namespace Assets.Scripts.Classes.ITEM.ARMOR
             switch (this.GetLevel())
             {
                 case 0:
-                    this.SetDefense(1);
+                    this.SetDefense(30);
                     break;
                 case 1:
-                    this.SetDefense(2);
+                    this.SetDefense(44);
                     break;
                 case 2:
-                    this.SetDefense(3);
+                    this.SetDefense(58);
                     break;
                 case 3:
-                    this.SetDefense(4);
+                    this.SetDefense(90);
                     break;
                 case 4:
-                    this.SetDefense(5);
+                    this.SetDefense(118);
                     break;
                 case 5:
-                    this.SetDefense(6);
+                    this.SetDefense(146);
                     break;
                 case 6:
-                    this.SetDefense(7);
+                    this.SetDefense(150);
                     break;
                 case 7:
-                    this.SetDefense(8);
+                    this.SetDefense(160);
                     break;
                 case 8:
-                    this.SetDefense(9);
+                    this.SetDefense(202);
                     break;
                 default:
                     break;
